@@ -1,17 +1,3 @@
-<html>
-<head>
-
-<title>
-Welcome to SSPGM Nived
-</title>
-<style>
-a:link      {color:white;text-decoration:none;font-weight:bold}
-a:visited {color:white;text-decoration:none;font-weight:bold}
-a:hover  {color:#66CCFF;text-decoration:none;font-weight:bold}
-</style>
-</head>
-<body bgcolor="black">
-
 <center>
 <table border="1" cellspacing="0" cellpadding="7" bordercolor="#CC3333" width="700">
 <tr valign="top">
@@ -27,7 +13,7 @@ Welcome to the Nived Page
 <br><br>
 
 <font color="steelblue"><b>
-There will be an Upcoming Vara Nived in Cambridge on August 14<sup>th</sup>. 
+There will be an Upcoming Vara Nived in Cambridge on August 14<sup>th</sup>.
 For More Details, go to <a href="http://www.balvi-maa.org.uk/events.htm">www.balvi-maa.org.uk</a>
 </b></font>
 </td>
@@ -40,30 +26,7 @@ For More Details, go to <a href="http://www.balvi-maa.org.uk/events.htm">www.bal
 <table border="1" cellspacing="0" cellpadding="5" bordercolor="#000080" width="100%" height="100%">
 <tr>
 <td align="center">
-
-<script language="JavaScript">
-<!--
-
-function SymError()
-{
-  return true;
-}
-
-window.onerror = SymError;
-
-var SymRealWinOpen = window.open;
-
-function SymWinOpen(url, name, attributes)
-{
-  return (new Object());
-}
-
-window.open = SymWinOpen;
-
-//-->
-</script>
-
-<script language="javascript" src="http://www.sspgm.net/right.js"></script>
+<%= render 'shared/right' %>
 </td>
 </tr>
 </table>
@@ -71,35 +34,3 @@ window.open = SymWinOpen;
 </td>
 </tr>
 </table>
-<p>
-<script language="javascript" src="http://www.sspgm.net/bottom.js"></script>
-</center>
-</body>
-</html>
-<script language="JavaScript">
-<!--
-var SymRealOnLoad;
-var SymRealOnUnload;
-
-function SymOnUnload()
-{
-  window.open = SymWinOpen;
-  if(SymRealOnUnload != null)
-     SymRealOnUnload();
-}
-
-function SymOnLoad()
-{
-  if(SymRealOnLoad != null)
-     SymRealOnLoad();
-  window.open = SymRealWinOpen;
-  SymRealOnUnload = window.onunload;
-  window.onunload = SymOnUnload;
-}
-
-SymRealOnLoad = window.onload;
-window.onload = SymOnLoad;
-
-//-->
-</script>
-
