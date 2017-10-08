@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sspgm</title>
+    <title>SSPGM.net</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,5 +10,33 @@
 
   <body>
     <%= yield %>
+
+    <center>
+      <table border="0" cellspacing="0" cellpadding="5">
+        <tr>
+          <td align="center">
+            <%= link_to "About Us", page_path('aboutus') %>
+            <font color="red" size="2"><b> | </b></font>
+            <font color="white" size="2"><b>Copyright &copy; 2002-<%= DateTime.now.year %></b></font>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <!-- StatCounter -->
+    <script type="text/javascript" language="javascript">
+      var sc_project=491905;
+      var sc_partition=3;
+      var sc_invisible=0;
+    </script>
+
+    <script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+    <noscript>
+      <a href="http://www.statcounter.com/" target="_blank">
+        <img  src="http://c4.statcounter.com/counter.php?sc_project=491905&amp;java=0&amp;invisible=0" alt="web stats" border="0">
+      </a>
+    </noscript>
+    <!-- End StatCounter -->
+
   </body>
 </html>
