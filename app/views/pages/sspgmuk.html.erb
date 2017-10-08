@@ -1,0 +1,63 @@
+<center>
+<table border="1" cellspacing="0" cellpadding="9" width="900" bordercolor="#CC3333">
+<tr>
+<td width="25%" height="100%">
+
+<table border="1" cellspacing="0" cellpadding="7" height="100%" width="100%" bordercolor="#000080">
+<tr valign="top">
+<td  align="center">
+<%= render 'shared/uk_left' %>
+</td>
+</tr>
+</table>
+
+</td>
+<td width="50%" height="100%">
+
+<table border="1" cellspacing="0" cellpadding="7" height="100%" width="100%" bordercolor="#000080">
+<tr valign="top">
+<td>
+<p><br><p>
+<center><%= link_to image_tag('UK_mandal1.jpg', height: "150", width: "225"), image_path('UK_mandal1.jpg') %><br>
+<font color="white" size="3"><b>Click Picture to Enlarge</b></font><p>
+
+<%= link_to page_path('ukseat') do %>
+  <font color="red">
+  CLICK HERE to see the names of the above office bearers for the UK Mandal elected on 22<sup>nd</sup> May, 1976
+  </font>
+<% end -%>
+<p>
+
+<%= link_to page_path('ukwelcome') do %>
+  <font color="#66CCFF">
+  CLICK HERE for the History of SSPGM, Later Known as UK Mandal
+  </font>
+<% end -%>
+<p>
+
+<%= link_to page_path('ukconstitution') do %>
+  <font color="red">
+  CLICK HERE for the CONSTITUTION
+  </font>
+<% end -%>
+<p>
+
+</td>
+</tr>
+</table>
+
+</td>
+<td width="25%" height="100%">
+
+<table border="1" cellspacing="0" cellpadding="7" height="100%" width="100%" bordercolor="#000080">
+<tr valign="top">
+<td align="center">
+<%= render 'shared/right' %>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</center>

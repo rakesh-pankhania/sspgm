@@ -1,0 +1,48 @@
+<center>
+<table width="700" height="600" border="1" cellspacing="0" cellpadding="10" bordercolorlight="#CC3333" bordercolordark="#CC3333">
+<tr>
+
+<td width="70%" height="100%">
+<table border="1" height="100%" width="100%" cellspacing="0" cellpadding="5" bordercolorlight="#000080" bordercolordark="#000080">
+<tr valign="top">
+<td>
+<center>
+<br>
+<font color="red" size="4">
+<b>
+Welcome to the Ramnagar Mandal
+</b>
+</font>
+<p>
+</center>
+</td>
+</tr>
+</table>
+</td>
+<!-- Links-->
+<td width="30%" height="100%">
+<table border="1" height="100%" width="100%" cellspacing="0" cellpadding="5" bordercolorlight="#000080" bordercolordark="#000080">
+<tr valign="top">
+<td>
+<center>
+<br>
+<%= link_to root_url do %>
+<font color="yellow" size="3">
+Back to Main
+</font>
+<% end -%>
+<p>
+  <font color="red"><b>
+Features
+</b>
+</font>
+<br>
+<%= link_to "Committee Members", page_path('ramnagarcommittee') %>
+<p>
+<%= render 'shared/india_left' %>
+</table>
+</td>
+
+</tr>
+</table>
+</center>

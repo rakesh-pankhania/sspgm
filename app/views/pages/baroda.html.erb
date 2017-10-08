@@ -1,0 +1,57 @@
+<center>
+<table border="1" cellspacing="0" cellpadding="9" height="100%" width="700" bordercolor="#CC3333">
+<tr>
+<td width="65%" height="100%">
+
+<table border="1" cellspacing="0" cellpadding="7" height="100%" width="100%" bordercolor="#000080">
+<tr valign="top">
+<td>
+<p>
+<font color="#CC3333"><center><h1>
+Welcome to the Baroda Mandal
+</h1></center></font>
+<p><br>
+<%= link_to "Click Here for the History of Baroda", page_path('barhist') %>
+</a>
+<p>
+<center>
+  <%= link_to image_tag('barodapic.jpg', height: "120", width: "200"), image_path('barodapic.jpg') %>
+</center>
+<p>
+<font color="red"><b>
+Information submitted by <a href="mailto:kukadia@indiatimes.com">Rajesh Kukadia</a> of Baroda (Vadodara), India
+</b></font>
+<p>
+</td>
+</tr>
+</table>
+
+</td>
+<td width="35%" height="100%">
+
+<table border="1" cellspacing="0" cellpadding="7" height="100%" width="100%" bordercolor="#000080">
+<tr valign="top">
+<td align="center">
+<p>
+<%= link_to root_url do %>
+<font color="yellow">Back to Main</font>
+<% end -%><p>
+
+
+<font color="red" size="3"><b>
+Features
+</b></font>
+<br>
+<%= link_to "The President", page_path('barmem') %><br>
+<%= link_to "The Executive Committee", page_path('barmem') %><p>
+
+<%= render 'shared/india_left' %>
+<p>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</center>
