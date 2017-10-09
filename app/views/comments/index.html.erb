@@ -1,0 +1,43 @@
+<a name="top"></a><center>
+<table cellspacing="0" cellpadding="9" height="100%" width="1000"><tr>
+
+<td width="70%" height="100%">
+<table cellspacing="0" cellpadding="7" height="100%" width="100%">
+<tr valign="top">
+<td><font size="2" color=white>
+<center><h1><font color="#CC3333">
+SSPGM Comments Page
+</font></h1>
+
+<!-- TODO: Render comment date, country, first name, last name...etc -->
+
+<table>
+  <% @comments.each do |comment| %>
+  <tr>
+    <td>
+      <%= simple_format(comment.comment) %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+
+<p><hr color="#CC3333"><center><a href="#top">Back to Top</a></center><hr color="#CC3333">
+
+</td>
+</tr>
+</table>
+
+</td>
+<td width="30%" height="100%">
+
+<table cellspacing="0" cellpadding="7" height="100%" width="100%" style="border-left: 2px solid #CC3333">
+<tr valign="top">
+<td align="center">
+<%= render 'shared/right' %>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
