@@ -1,8 +1,8 @@
 namespace :migration do
-  task :load_comments, %i[filename] => :environment do |_t, args|
+  task load_comments: :environment do |_t, args|
 
     comments = []
-    File.open(Rails.root.join("lib", "tasks", "migration", "#{args[:filename]}.json"), "r") do |file|
+    File.open(Rails.root.join("lib", "tasks", "migration", "comments.json"), "r") do |file|
       comments = JSON.load(file)
     end
 
