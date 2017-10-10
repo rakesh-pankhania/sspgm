@@ -1,7 +1,9 @@
 <%= link_to root_url do %><font color=yellow><b>Back to Main</b></font><% end -%><br /><br />
 
 <font color=red><b>**Click Here**</b></font><br />
-<a href=http://www.sspgm.net/directory/country.php><font color=#33CCCC><b>Global SSPGM Directory</b></font></a><br /><br />
+<%= link_to members_path do %>
+  <font color=#33CCCC><b>Global SSPGM Directory</b></font><br /><br />
+<% end -%>
 
 <font color=red><b>Comments Page</b></font><br />
 <%= link_to "Click Here", comments_path %><br /><br />
