@@ -8,16 +8,46 @@
 <center><h1><font color="#CC3333">
 SSPGM Professionals Page
 </font></h1>
+</center>
 
-<!-- TODO: Render professional attributes-->
-<!-- TODO: No pictures migrated -->
+<% if @filter_by -%>
+  Filtering by "<%= @filter_by %>"<br /><br />
+<% else -%>
+  <table style="border: 2px solid steelblue">
+    <tr>
+      <td>
+        <font color="red"><b>Filter by...</b></font>
+      </td>
+    </tr>
+    <tr valign="top">
+    <% @filter_categories.each_slice(7) do |categories| -%>
+      <td width="200">
+        <% categories.each do |category| %>
+          <%= link_to category, professionals_url(category: category) %><br />
+        <% end -%>
+      </td>
+    <% end -%>
+    </tr>
+</table>
+<% end -%><br /><br />
 
 <table>
   <tbody>
     <% @professionals.each do |professional| %>
       <tr>
         <td>
-          <%= professional.inspect %>
+          <%= professional.first_name %><% if professional.middle_name %><%= " #{professional.middle_name}" %><% end %><%= " #{professional.last_name}" %><br />
+          <% unless professional.graduation_degree.blank? %><%= professional.graduation_degree %><% unless professional.graduation_year.blank? %> (<%= professional.graduation_year %>)<br /><% end %><% end %>
+          <% unless professional.graduation_university.blank? %><%= professional.graduation_university %><br /><% end %>
+          <% unless professional.job_title.blank? %><b>Title: </b><%= professional.job_title %><br /><% end %>
+          <% unless professional.job_company.blank? %><b>Company: </b><%= professional.job_company %><br /><% end %>
+          <% unless professional.location.blank? %><b>Location: </b><%= professional.location %><br /><% end %>
+          <% unless professional.telephone.blank? %><b>Telephone: </b><%= professional.telephone %><br /><% end %>
+          <% unless professional.mobile.blank? %><b>Mobile: </b><%= professional.mobile %><br /><% end %>
+          <% unless professional.fax.blank? %><b>Fax: </b><%= professional.fax %><br /><% end %>
+          <% unless professional.email.blank? %><b>Email: </b><%= link_to professional.email, "mailto:#{professional.email}" %><br /><% end %>
+          <% unless professional.website.blank? %><b>Website: </b><%= link_to professional.website, url_with_http(professional.website) %><br /><% end %>
+          <% unless professional.spec.blank? %><b>Specification: </b><%= professional.spec %><br /><% end %>
         </td>
       </tr>
     <% end %>
