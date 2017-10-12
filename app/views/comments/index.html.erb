@@ -9,19 +9,16 @@
 SSPGM Comments Page
 </font></h1>
 
-<!-- TODO: Render comment date, country, first name, last name...etc -->
-
 <table>
   <% @comments.each do |comment| %>
   <tr>
-    <td>
+    <td style="border-bottom: 2px solid steelblue;">
+      <%= email_linkified_commenter_name(comment) %> on <%= comment.created_at.strftime('%B %-d, %Y') %> from <%= comment.country %><br />
       <%= simple_format(comment.comment) %>
     </td>
   </tr>
   <% end %>
 </table>
-
-<p><hr color="#CC3333"><center><a href="#top">Back to Top</a></center><hr color="#CC3333">
 
 </td>
 </tr>
