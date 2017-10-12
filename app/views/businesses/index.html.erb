@@ -1,4 +1,3 @@
-<a name="top"></a><center>
 <table cellspacing="0" cellpadding="9" height="100%" width="1000"><tr>
 
 <td width="70%" height="100%">
@@ -7,18 +6,32 @@
 <td><font size="2" color=white>
 <center><font color="#CC3333" size="4"><b>
 A Comprehensive Guide to SSPGM Businesses Worldwide<br>
-</b></font></center>
+</b></font></center><br /><br />
 
-<!-- TODO: Render business attributes -->
-<table>
-  <tbody>
-    <% @businesses.each do |business| %>
-      <tr>
-        <td><%= link_to business.name, business %></td>
-      </tr>
-    <% end %>
-  </tbody>
+<% if @filter_by -%>
+  Filtering by "<%= @filter_by %>"<br /><br />
+<% else -%>
+  <table style="border: 2px solid steelblue">
+    <tr>
+      <td>
+        <font color="red"><b>Filter by...</b></font>
+      </td>
+    </tr>
+    <tr valign="top">
+    <% @filter_categories.each_slice(7) do |categories| -%>
+      <td width="200">
+        <% categories.each do |category| %>
+          <%= link_to category, businesses_url(category: category) %><br />
+        <% end -%>
+      </td>
+    <% end -%>
+    </tr>
 </table>
+<% end -%><br /><br />
+
+<% @businesses.each do |business| %>
+  <%= link_to business.name, business %><br />
+<% end %>
 
 </td>
 </tr>

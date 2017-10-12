@@ -1,18 +1,46 @@
-<p id="notice"><%= notice %></p>
+<a name="top"></a><center>
+<table cellspacing="0" cellpadding="9" height="100%" width="1000"><tr>
 
-<b><%= "name".titleize %>: </b><%= @business.name %><br />
-<b><%= "owner".titleize %>: </b><%= @business.owner %><br />
-<b><%= "address".titleize %>: </b><%= @business.address %><br />
-<b><%= "city".titleize %>: </b><%= @business.city %><br />
-<b><%= "state".titleize %>: </b><%= @business.state %><br />
-<b><%= "zip".titleize %>: </b><%= @business.zip %><br />
-<b><%= "country".titleize %>: </b><%= @business.country %><br />
-<b><%= "tel".titleize %>: </b><%= @business.tel %><br />
-<b><%= "fax".titleize %>: </b><%= @business.fax %><br />
-<b><%= "mobile".titleize %>: </b><%= @business.mobile %><br />
-<b><%= "website".titleize %>: </b><%= @business.website %><br />
-<b><%= "email".titleize %>: </b><%= @business.email %><br />
-<b><%= "category".titleize %>: </b><%= @business.category %><br />
-<b><%= "spec".titleize %>: </b><%= @business.spec %><br /><br />
+<td width="70%" height="100%">
+<table cellspacing="0" cellpadding="7" height="100%" width="100%">
+<tr valign="top">
+<td><font size="2" color=white>
+<center><font color="#CC3333" size="4"><b>
+A Comprehensive Guide to SSPGM Businesses Worldwide<br>
+</b></font></center><br /><br />
+
+<i><%= @business.category %> - <%= @business.spec %></i><br /><br />
+
+<b><font color="red"><%= @business.name %></font></b><br />
+<b>Owner: </b><%= @business.owner %><br />
+<%= @business.address %><br />
+<%= @business.city %>, <%= @business.state %>, <%= @business.country %> <%= @business.zip %> <%= @business.country %><br /><br />
+
+<% unless @business.tel.blank? %><b>tel: </b><%= @business.tel %><br /><% end -%>
+<% unless @business.fax.blank? %><b>fax: </b><%= @business.fax %><br /><% end -%>
+<% unless @business.mobile.blank? %><b>mobile: </b><%= @business.mobile %><br /><% end -%>
+<% unless @business.website.blank? %><%= link_to @business.website, url_with_http(@business.website) %><br /><% end -%>
+<% unless @business.email.blank? %><%= link_to @business.email, "mailto:#{@business.email}" %><% end -%>
+
+<br /><br /><br />
 
 <%= link_to 'Back', businesses_path %>
+
+</td>
+</tr>
+</table>
+
+</td>
+<td width="30%" height="100%">
+
+<table cellspacing="0" cellpadding="7" height="100%" width="100%" style="border-left: 2px solid #CC3333">
+<tr valign="top">
+<td align="center">
+<%= render 'shared/right' %>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
