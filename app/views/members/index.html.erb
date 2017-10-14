@@ -6,20 +6,46 @@
 <tr valign="top">
 <td><font size="2" color=white>
 <center><h1><font color="#CC3333">
-SSPGM Comments Page
+SSPGM Directory
 </font></h1>
 
-<!-- TODO: Render member attributes -->
+</center>
 
-<table>
-  <tbody>
-    <% @members.each do |member| %>
-      <tr>
-        <td><%= member.inspect %></td>
-      </tr>
-    <% end %>
-  </tbody>
+<% if @filter_by -%>
+  Filtering by "<%= @filter_by %>"<br />
+  <%= link_to "<< Return to all results", members_url %><br /><br />
+<% else -%>
+  <table style="border: 2px solid steelblue">
+    <tr>
+      <td>
+        <font color="red"><b>Filter by...</b></font>
+      </td>
+    </tr>
+    <tr valign="top">
+    <% @filter_categories.each_slice(7) do |categories| -%>
+      <td width="200">
+        <% categories.each do |category| %>
+          <%= link_to category, members_url(country: category) %><br />
+        <% end -%>
+      </td>
+    <% end -%>
+    </tr>
 </table>
+<% end -%><br /><br />
+
+<% @members.each do |member| %>
+<font color="red"><b><%= member_name(member) %></b></font><br />
+<% unless member.address.blank? %><%= member.address %><br /><% end %>
+<%= "#{member.city}, #{member.state} #{member.zip} #{member.country}" %><br />
+<% unless member.telephone.blank? %>Tel: <%= member.telephone %><br /><% end %>
+<% unless member.email.blank? %>Email: <%= link_to member.email, "mailto:#{member.email}" %><br /><% end %>
+<% unless member.spouse.blank? %>Spouse: <%= member.spouse %><br /><% end %>
+<% unless member.children.blank? %>Children: <%= member.children %><br /><% end %>
+<% unless member.education.blank? %>Education: <%= member.education %><br /><% end %>
+<% unless member.profession.blank? %>Profession: <%= member.profession %><br /><% end %>
+
+<br /><br />
+<% end %>
 
 </td>
 </tr>

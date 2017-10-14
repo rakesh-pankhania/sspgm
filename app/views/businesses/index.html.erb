@@ -9,7 +9,8 @@ A Comprehensive Guide to SSPGM Businesses Worldwide<br>
 </b></font></center><br /><br />
 
 <% if @filter_by -%>
-  Filtering by "<%= @filter_by %>"<br /><br />
+  Filtering by "<%= @filter_by %>"<br />
+  <%= link_to "<< Return to all results", businesses_url %><br /><br />
 <% else -%>
   <table style="border: 2px solid steelblue">
     <tr>

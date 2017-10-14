@@ -11,7 +11,8 @@ SSPGM Professionals Page
 </center>
 
 <% if @filter_by -%>
-  Filtering by "<%= @filter_by %>"<br /><br />
+  Filtering by "<%= @filter_by %>"<br />
+  <%= link_to "<< Return to all results", professionals_url %><br /><br />
 <% else -%>
   <table style="border: 2px solid steelblue">
     <tr>
