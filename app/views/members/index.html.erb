@@ -10,6 +10,13 @@ SSPGM Directory
 </font></h1>
 
 </center>
+<p align="right">
+<% if user_signed_in? %>
+  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+<% else %>
+  <%= link_to('Login', new_user_session_path)  %>
+<% end %>
+</p>
 
 <% if @filter_by -%>
   Filtering by "<%= @filter_by %>"<br />

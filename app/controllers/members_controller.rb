@@ -1,4 +1,6 @@
 class MembersController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @members = Member.all.order(:last_name, :first_name, :middle_name)
 

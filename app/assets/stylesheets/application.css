@@ -17,6 +17,7 @@
 body {
   background-color: black;
   color: white;
+  margin: 0;
 }
 
 a {
@@ -40,4 +41,42 @@ a:hover {
 
 font {
   font-family: arial, helvetica;
+}
+
+.application-notice:empty {
+  display: none;
+}
+
+.application-notice {
+  text-align: center;
+  border-radius: 1px;
+  border-width: 0 0 1px 0;
+  background-color: #222222;
+  padding: 5px;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d0e9c6;
+  color: #3c763d; }
+  .alert-success hr {
+    border-top-color: #c1e2b3; }
+  .alert-success .alert-link {
+    color: #2b542c; }
+
+.alert-danger {
+  background-color: #f2dede;
+  border-color: #ebcccc;
+  color: #a94442; }
+  .alert-danger hr {
+    border-top-color: #e4b9b9; }
+  .alert-danger .alert-link {
+    color: #843534; }
+
+.body-container {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
 }

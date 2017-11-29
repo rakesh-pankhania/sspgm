@@ -42,14 +42,26 @@ group :development, :test do
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
+  # Preview mail in the browser instead of sending.
+  # https://github.com/ryanb/letter_opener
+  gem 'letter_opener'
+  # Listens to file modifications and notifies you about the changes
+  # https://github.com/guard/listen
   gem 'listen', '>= 3.0.5', '< 3.2'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Access an IRB console on exception pages or by using <%= console %>
+  # https://github.com/rails/web-console
+  gem 'web-console', '>= 3.3.0'
+  # Speeds up development by keeping your application running in the background.
+  # https://github.com/rails/spring
   gem 'spring'
+  # Makes Spring watch the filesystem for changes using Listen
+  # https://github.com/jonleighton/spring-watcher-listen
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+# Flexible authentication solution for Rails with Warden
+# https://github.com/plataformatec/devise
+gem 'devise'
 # Easily include static pages in your Rails app.
 # https://github.com/thoughtbot/high_voltage
 gem 'high_voltage', '~> 3.0.0'
