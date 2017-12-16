@@ -1,15 +1,10 @@
-<a name="top"></a><center>
 <table cellspacing="0" cellpadding="9" height="100%" width="1000"><tr>
 
-<td width="70%" height="100%">
+<td valign="top" width="70%" height="100%">
 <table cellspacing="0" cellpadding="7" height="100%" width="100%">
 <tr valign="top">
 <td><font size="2" color=white>
-<center><h1><font color="#CC3333">
-SSPGM Directory
-</font></h1>
 
-</center>
 <p align="right">
 <% if user_signed_in? %>
   <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
@@ -18,18 +13,18 @@ SSPGM Directory
 <% end %>
 </p>
 
-<% if @filter_by -%>
-  Filtering by "<%= @filter_by %>"<br />
-  <%= link_to "<< Return to all results", members_url %><br /><br />
-<% else -%>
-  <table style="border: 2px solid steelblue">
-    <tr>
-      <td>
-        <font color="red"><b>Filter by...</b></font>
-      </td>
-    </tr>
+<center><h1 class="page-header">SSPGM Directory</h1></center>
+
+<div class="member-filters">
+  <% if @filter_by -%>
+    Filtering by "<%= @filter_by %>"<br />
+    <%= link_to "<< Return to all results", members_url %>
+    <br /><br />
+  <% end -%>
+
+  <table>
     <tr valign="top">
-    <% @filter_categories.each_slice(7) do |categories| -%>
+    <% @filter_categories.each_slice(5) do |categories| -%>
       <td width="200">
         <% categories.each do |category| %>
           <%= link_to category, members_url(country: category) %><br />
@@ -37,8 +32,10 @@ SSPGM Directory
       </td>
     <% end -%>
     </tr>
-</table>
-<% end -%><br /><br />
+  </table>
+</div>
+
+<br /><br />
 
 <% @members.each do |member| %>
 <font color="red"><b><%= member_name(member) %></b></font><br />
@@ -59,7 +56,7 @@ SSPGM Directory
 </table>
 
 </td>
-<td width="30%" height="100%">
+<td width="30%" height="100%" valign="top">
 
 <table cellspacing="0" cellpadding="7" height="100%" width="100%" style="border-left: 2px solid #CC3333">
 <tr valign="top">
