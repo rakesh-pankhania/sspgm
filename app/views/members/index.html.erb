@@ -6,7 +6,8 @@
 <td><font size="2" color=white>
 
 <p align="right">
-<% if user_signed_in? %>
+<% if user_signed_in? -%>
+  <% if current_user.member %><%= link_to('My Information', edit_member_path(current_user.member)) %> | <% end -%>
   <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
 <% else %>
   <%= link_to('Login', new_user_session_path)  %>

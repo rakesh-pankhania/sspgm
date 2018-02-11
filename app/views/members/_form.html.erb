@@ -1,17 +1,56 @@
-<%= form_with(model: member, local: true) do |form| %>
-  <% if member.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(member.errors.count, "error") %> prohibited this member from being saved:</h2>
+<center><h1 class="page-header">Update Member</h1></center>
 
-      <ul>
-      <% member.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_with(model: member, validate: true) do |form| %>
+  <%= form.label :first_name %>
+  <%= form.text_field :first_name %>
+
+  <%= form.label :middle_name %>
+  <%= form.text_field :middle_name %>
+
+  <%= form.label :last_name %>
+  <%= form.text_field :last_name %>
+
+  <%= form.label :spouse %>
+  <%= form.text_field :spouse %>
+
+  <br /><br />
+
+  <%= form.label :telephone %>
+  <%= form.text_field :telephone %>
+
+  <%= form.label :address %>
+  <%= form.text_field :address %>
+
+  <%= form.label :city %>
+  <%= form.text_field :city %>
+
+  <%= form.label :state %>
+  <%= form.text_field :state %>
+
+  <%= form.label :zip %>
+  <%= form.text_field :zip %>
+
+  <%= form.label :country %>
+  <%= form.text_field :country %>
+
+  <br /><br />
+
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+
+  <%= form.label :children %>
+  <%= form.text_field :children %>
+
+  <%= form.label :education %>
+  <%= form.text_field :education %>
+
+  <%= form.label :profession %>
+  <%= form.text_field :profession %>
+
+<br /><br />
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Save" %>
+    <%= link_to "Go back", members_url %>
   </div>
 <% end %>
