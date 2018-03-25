@@ -12,9 +12,10 @@ Welcome to the Vasta Pankhania Family Tree
 <%= link_to image_tag('vasta_pankhania.jpg', width: "165", height: "145"), image_path('vasta_pankhania.jpg') %><br />
 <i><font color="#CC3333">Click on picture to enlarge</font></i><p>
 
-<a href="http://www.sspgm.net/familytrees/pankhania_vasta/view.asp">
-<font color="steelblue" size="5">
-Click Here to go to the Vasta Pankhania Family Tree</font></a><p></center>
+<% vasta_profile = FamilyMember.where(first_name: "Vasta", last_name: "Pankhania").first! %>
+<%= link_to family_member_path(vasta_profile) do %>
+  <font color="steelblue" size="5">Click Here for the Vasta Pankhania Family Tree</font>
+<% end -%>
 
 <br><br>
 

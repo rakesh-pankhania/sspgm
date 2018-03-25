@@ -8,8 +8,13 @@ Welcome to the Karaman Pankhania Family Tree
 <td>
 
 <center>
-<a href="http://www.sspgm.net/familytrees/pankhania_karaman/view.asp?id=25"><font color="steelblue" size="5">
-Click Here for the Karaman Pankhania Family Tree</font></a><p></center>
+
+<% karaman_profile = FamilyMember.where(first_name: "Karaman", last_name: "Pankhania").first! %>
+<%= link_to family_member_path(karaman_profile) do %>
+  <font color="steelblue" size="5">Click Here for the Karaman Pankhania Family Tree</font>
+<% end -%>
+
+</center>
 
 <p><br><br>
 

@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20180114215817) do
   create_table "family_members", force: :cascade do |t|
     t.string "external_id"
     t.string "first_name"
+    t.string "last_name"
     t.string "father_id"
     t.string "grandfather_id"
     t.string "picture"

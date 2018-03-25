@@ -12,6 +12,7 @@ class CreateFamilyMembers < ActiveRecord::Migration[5.1]
     create_table :family_members do |t|
       t.string     :external_id
       t.string     :first_name
+      t.string     :last_name
       t.string     :father_id
       t.string     :grandfather_id
       t.string     :picture

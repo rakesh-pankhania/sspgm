@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :businesses, only: [:index, :show]
   resources :comments, only: :index
-  resources :family_members, only: [:index, :show]
+  resources :family_members, only: :show
   resources :members, only: [:edit, :index, :update]
   resources :professionals, only: [:index, :show]
 end
