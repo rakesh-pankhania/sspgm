@@ -1,12 +1,11 @@
+<center><h1 class="page-header">SSPGM Businesses Page</h1></center>
+
 <table cellspacing="0" cellpadding="9" height="100%" width="1000"><tr>
 
 <td width="70%" height="100%">
 <table cellspacing="0" cellpadding="7" height="100%" width="100%">
 <tr valign="top">
 <td><font size="2" color=white>
-<center><font color="#CC3333" size="4"><b>
-A Comprehensive Guide to SSPGM Businesses Worldwide<br>
-</b></font></center><br /><br />
 
 <% if @filter_by -%>
   Filtering by "<%= @filter_by %>"<br />
@@ -30,8 +29,12 @@ A Comprehensive Guide to SSPGM Businesses Worldwide<br>
 </table>
 <% end -%><br /><br />
 
-<% @businesses.each do |business| %>
-  <%= link_to business.name, business %><br />
+<% @businesses_by_category.each do |category, businesses| %>
+  <font color="steelblue" size="3"><b><%= category %></b></font><br />
+  <% businesses.each do |business| %>
+    <%= link_to business.name, business %><br />
+  <% end -%>
+  <br />
 <% end %>
 
 </td>

@@ -2,14 +2,16 @@ class BusinessesController < ApplicationController
   before_action :set_business, only: [:show, :edit, :update, :destroy]
 
   def index
-    @businesses = Business.all.order(:name)
+    businesses = Business.all.order(:name)
 
     if params.key?(:category)
       @filter_by = params[:category]
-      @businesses = @businesses.where(category: @filter_by)
+      businesses = businesses.where(category: @filter_by)
     else
       @filter_categories = Business.all.order(:category).pluck('DISTINCT category')
     end
+
+    @businesses_by_category = businesses.group_by(&:category)
   end
 
   def show

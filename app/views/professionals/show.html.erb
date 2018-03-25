@@ -1,4 +1,48 @@
-<p id="notice"><%= notice %></p>
+<a name="top"></a><center>
+<table cellspacing="0" cellpadding="9" height="100%" width="1000"><tr>
 
-<%= link_to 'Edit', edit_professional_path(@professional) %> |
+<td width="70%" height="100%">
+<table cellspacing="0" cellpadding="7" height="100%" width="100%">
+<tr valign="top">
+<td><font size="2" color=white>
+<center><font color="#CC3333" size="4"><b>
+A Comprehensive Guide to SSPGM Professionals Worldwide<br>
+</b></font></center><br /><br />
+
+<i><%= @professional.category %> - <%= @professional.spec %></i><br /><br />
+
+<font color="red" size="3"><b><%= @professional.first_name %><% if @professional.middle_name %><%= " #{@professional.middle_name}" %><% end %><%= " #{@professional.last_name}" %></b></font><br />
+<% unless @professional.graduation_degree.blank? %><%= @professional.graduation_degree %><% unless @professional.graduation_year.blank? %> (<%= @professional.graduation_year %>)<br /><% end %><% end %>
+<% unless @professional.graduation_university.blank? %><%= @professional.graduation_university %><br /><% end %>
+<% unless @professional.job_title.blank? %><b>Title: </b><%= @professional.job_title %><br /><% end %>
+<% unless @professional.job_company.blank? %><b>Company: </b><%= @professional.job_company %><br /><% end %>
+<% unless @professional.location.blank? %><b>Location: </b><%= @professional.location %><br /><% end %>
+<% unless @professional.telephone.blank? %><b>Telephone: </b><%= @professional.telephone %><br /><% end %>
+<% unless @professional.mobile.blank? %><b>Mobile: </b><%= @professional.mobile %><br /><% end %>
+<% unless @professional.fax.blank? %><b>Fax: </b><%= @professional.fax %><br /><% end %>
+<% unless @professional.email.blank? %><b>Email: </b><%= link_to @professional.email, "mailto:#{@professional.email}" %><br /><% end %>
+<% unless @professional.website.blank? %><b>Website: </b><%= link_to @professional.website, url_with_http(@professional.website) %><br /><% end %>
+<% unless @professional.spec.blank? %><b>Specification: </b><%= @professional.spec %><br /><% end %>
+
+<br /><br /><br />
+
 <%= link_to 'Back', professionals_path %>
+
+</td>
+</tr>
+</table>
+
+</td>
+<td width="30%" height="100%">
+
+<table cellspacing="0" cellpadding="7" height="100%" width="100%" style="border-left: 2px solid #CC3333">
+<tr valign="top">
+<td align="center">
+<%= render 'shared/right' %>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>

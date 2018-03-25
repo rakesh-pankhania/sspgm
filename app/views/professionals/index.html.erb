@@ -1,14 +1,11 @@
-<a name="top"></a><center>
+<center><h1 class="page-header">SSPGM Professionals Page</h1></center>
+
 <table cellspacing="0" cellpadding="9" height="100%" width="1000"><tr>
 
 <td width="70%" height="100%">
 <table cellspacing="0" cellpadding="7" height="100%" width="100%">
 <tr valign="top">
 <td><font size="2" color=white>
-<center><h1><font color="#CC3333">
-SSPGM Professionals Page
-</font></h1>
-</center>
 
 <% if @filter_by -%>
   Filtering by "<%= @filter_by %>"<br />
@@ -30,30 +27,17 @@ SSPGM Professionals Page
     <% end -%>
     </tr>
 </table>
-<% end -%><br /><br />
+<% end -%>
 
-<table>
-  <tbody>
-    <% @professionals.each do |professional| %>
-      <tr>
-        <td>
-          <%= professional.first_name %><% if professional.middle_name %><%= " #{professional.middle_name}" %><% end %><%= " #{professional.last_name}" %><br />
-          <% unless professional.graduation_degree.blank? %><%= professional.graduation_degree %><% unless professional.graduation_year.blank? %> (<%= professional.graduation_year %>)<br /><% end %><% end %>
-          <% unless professional.graduation_university.blank? %><%= professional.graduation_university %><br /><% end %>
-          <% unless professional.job_title.blank? %><b>Title: </b><%= professional.job_title %><br /><% end %>
-          <% unless professional.job_company.blank? %><b>Company: </b><%= professional.job_company %><br /><% end %>
-          <% unless professional.location.blank? %><b>Location: </b><%= professional.location %><br /><% end %>
-          <% unless professional.telephone.blank? %><b>Telephone: </b><%= professional.telephone %><br /><% end %>
-          <% unless professional.mobile.blank? %><b>Mobile: </b><%= professional.mobile %><br /><% end %>
-          <% unless professional.fax.blank? %><b>Fax: </b><%= professional.fax %><br /><% end %>
-          <% unless professional.email.blank? %><b>Email: </b><%= link_to professional.email, "mailto:#{professional.email}" %><br /><% end %>
-          <% unless professional.website.blank? %><b>Website: </b><%= link_to professional.website, url_with_http(professional.website) %><br /><% end %>
-          <% unless professional.spec.blank? %><b>Specification: </b><%= professional.spec %><br /><% end %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<br /><br />
+
+<% @professionals_by_category.each do |category, professionals| %>
+  <font color="steelblue" size="3"><b><%= category %></b></font><br />
+  <% professionals.each do |professional| %>
+    <%= link_to professional.name, professional %><br />
+  <% end -%>
+  <br />
+<% end %>
 
 </td>
 </tr>
