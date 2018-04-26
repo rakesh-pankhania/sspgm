@@ -41,6 +41,12 @@ group :development, :test do
   gem 'selenium-webdriver'
 end
 
+group :test do
+  # A mocking and stubbing library for Ruby
+  # https://github.com/freerange/mocha
+  gem "mocha"
+end
+
 group :development do
   # Preview mail in the browser instead of sending.
   # https://github.com/ryanb/letter_opener

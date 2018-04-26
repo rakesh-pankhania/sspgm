@@ -21,15 +21,15 @@ class MembersController < ApplicationController
   def update
     unless current_user.member && current_user.member == @member
       redirect_to controller: 'members', action: 'index'
-    end
+    else
+      @member.update(member_params)
 
-    @member.update(member_params)
-
-    respond_to do |format|
-      if @member.valid?
-        format.html { redirect_to({ action: :index }, { notice: "Changes saved" }) }
-      else
-        format.html { redirect_to({ action: :edit }, { alert: "Could not save changes" }) }
+      respond_to do |format|
+        if @member.valid?
+          format.html { redirect_to({ action: :index }, { notice: "Changes saved" }) }
+        else
+          format.html { redirect_to({ action: :edit }, { alert: "Could not save changes" }) }
+        end
       end
     end
   end

@@ -5,44 +5,54 @@ class MembersControllerTest < ActionDispatch::IntegrationTest
     @member = members(:one)
   end
 
-  test "should get index" do
+  test "should get index for logged in user" do
+    user = users(:one)
+    @member.update!(user_id: user.id)
+    sign_in user
+
     get members_url
     assert_response :success
   end
 
-  test "should get new" do
-    get new_member_url
-    assert_response :success
+  test "should redirect index if user not logged in" do
+    get members_url
+    assert_redirected_to new_user_session_path
   end
 
-  test "should create member" do
-    assert_difference('Member.count') do
-      post members_url, params: { member: {  } }
-    end
+  test "should get edit for logged in member editing own" do
+    user = users(:one)
+    @member.update!(user_id: user.id)
+    sign_in user
 
-    assert_redirected_to member_url(Member.last)
-  end
-
-  test "should show member" do
-    get member_url(@member)
-    assert_response :success
-  end
-
-  test "should get edit" do
     get edit_member_url(@member)
     assert_response :success
   end
 
-  test "should update member" do
-    patch member_url(@member), params: { member: {  } }
-    assert_redirected_to member_url(@member)
+  test "should redirect edit if member tries editing other member" do
+    sign_in users(:one)
+
+    get edit_member_url(@member)
+    assert_redirected_to members_url
   end
 
-  test "should destroy member" do
-    assert_difference('Member.count', -1) do
-      delete member_url(@member)
-    end
+  test "should update member for logged in member updating own" do
+    user = users(:one)
+    @member.update!(user_id: user.id)
+    sign_in user
+
+    patch member_url(@member), params: { member: { first_name: "Rakesh" } }
+    assert_redirected_to members_url
+    @member.reload
+    assert_equal "Rakesh", @member.first_name
+  end
+
+  test "should redirect update if member tries updating other member" do
+    sign_in users(:one)
+
+    patch member_url(@member), params: { member: { first_name: "Rakesh" } }
 
     assert_redirected_to members_url
+    @member.reload
+    assert_equal "John", @member.first_name
   end
 end
