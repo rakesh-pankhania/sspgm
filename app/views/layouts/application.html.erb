@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118778240-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-118778240-1');
+    </script>
+
     <title>SSPGM.net</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
@@ -23,24 +34,6 @@
         </center>
       </div>
 
-      <center>
-
-        <!-- StatCounter -->
-        <script type="text/javascript" language="javascript">
-          var sc_project=491905;
-          var sc_partition=3;
-          var sc_invisible=0;
-        </script>
-
-        <script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script>
-        <noscript>
-          <a href="http://www.statcounter.com/" target="_blank">
-            <img  src="http://c4.statcounter.com/counter.php?sc_project=491905&amp;java=0&amp;invisible=0" alt="web stats" border="0">
-          </a>
-        </noscript>
-        <!-- End StatCounter -->
-
-      </center>
     </div>
   </body>
 </html>
