@@ -1,1 +1,60 @@
-<center><table bordercolor="red" border="1" cellpadding="7" cellspacing="0" style="width: 90%">  <tr valign="top">    <td height="100%" width="25%">      <table bordercolor="#000080" border="1" cellpadding="5" cellspacing="0" height="100%">        <tr valign="top">          <td align="center" height="100%">            <font color="red" size="3"><b>Features</b></font><br />            <%= link_to "History Of SSPGM", page_path('sspgmhistory2') %><br />            <%= link_to "Shreebai Mataji's Story", page_path('sspgmshreebai2') %><br />            <%= link_to "Sants/Bhaktas", page_path('sspgmsantsbhaktas') %><br />            <%= link_to "Profiles of Elders", page_path('sspgmprofiles') %><br />            <%= link_to "Rising Stars", page_path('risingstars') %><br />            <%= link_to "The Origin of the Gujarati Language", page_path('gujaratiorigin') %><br />            <%= link_to "SSPGM Members' Global Journey", page_path('journey') %><br /><br />            <font color="red" size="3"><b>Surnames</b></font><br />            <%= link_to "History of Surnames", page_path('sspgmsurnames') %><br />            <%= link_to "Family Trees", page_path('familytrees/home') %><br />            <%= link_to "Kurdevi", page_path('sspgmkurdevi') %><br />            <%= link_to "Nived", page_path('sspgmnived') %><br /><br />            <font color="red" size="3"><b>Customs &amp; Rituals</b></font><br />            <%= link_to "Answers of Why", page_path('answersofwhy') %><br />            <%= link_to "Raksha Bandhan", page_path('rakshabandhan') %><br />            <%= link_to "Diwali", page_path('diwali') %><br /><br />            <font color="red" size="3"><b>Legends</b></font><br />            <%= link_to "Legend of Hanuman", page_path('hanuman') %><br />            <%= link_to "Legend of Ramapeer", page_path('ramapeerparcha') %><br />            <%= link_to "Ramnavami Festival", page_path('ramnavami') %><br />            <%= link_to "Shivratri Utsav", page_path('shivratri') %><br />            <%= link_to "Stories of Krishna", page_path('krishna') %><br /><br />            <font color="red" size="3"><b>Folksongs</b></font><br />            <%= link_to "Click Here", page_path('sspgmfolksongs') %><br /><br />            <font color="red" size="3"><b>Glossary of Terms</b></font><br />            <%= link_to "Click Here", page_path('sspgmglossary') %><br /><br /><br /><br /><br /><br /><br />          </td>        </tr>      </table>    </td>    <td align="center" width="50%">      <table bordercolor="#000080" border="1" cellpadding="5" cellspacing="0" width="100%" height="100%">        <tr valign="top">          <td align="center">            <br />            <%= link_to page_path('sspgmwelcome')  do %>              <font color="#66CCFF">WELCOME NOTE</font>            <% end -%><br /><br />            <font color="yellow"><b>              We Would Like to Wish Our Members Worldwide a Happy Diwali and a Prosperous New Year 2073!            </b></font><br /><br />            <%= image_tag('shreebai2.jpg') %>            <br /><br /><br /><br />            <br /><br /><br />          </td>        </tr>      </table>    </td>    <td align="center" height="100%">      <table bordercolor="#000080" border="1" cellpadding="5" cellspacing="0" height="100%" width="100%">        <tr valign="top">          <td align="center" height="100%" width="100%">            <%= render "shared/right" %>          </td>        </tr>      </table>    </td>  </tr></table>
+<div class="container mb-4 mt-4 ">
+  <div class="row">
+    <div class="col">
+      <center>
+        <font color="red" size="3"><b>Features</b></font><br />
+        <%= link_to "History Of SSPGM", page_path('sspgmhistory2') %><br />
+        <%= link_to "Shreebai Mataji's Story", page_path('sspgmshreebai2') %><br />
+        <%= link_to "Sants/Bhaktas", page_path('sspgmsantsbhaktas') %><br />
+        <%= link_to "Profiles of Elders", page_path('sspgmprofiles') %><br />
+        <%= link_to "Rising Stars", page_path('risingstars') %><br />
+        <%= link_to "The Origin of the Gujarati Language", page_path('gujaratiorigin') %><br />
+        <%= link_to "SSPGM Members' Global Journey", page_path('journey') %><br /><br />
+
+        <font color="red" size="3"><b>Surnames</b></font><br />
+        <%= link_to "History of Surnames", page_path('sspgmsurnames') %><br />
+        <%= link_to "Family Trees", page_path('familytrees/home') %><br />
+        <%= link_to "Kurdevi", page_path('sspgmkurdevi') %><br />
+        <%= link_to "Nived", page_path('sspgmnived') %><br /><br />
+
+        <font color="red" size="3"><b>Customs &amp; Rituals</b></font><br />
+        <%= link_to "Answers of Why", page_path('answersofwhy') %><br />
+        <%= link_to "Raksha Bandhan", page_path('rakshabandhan') %><br />
+        <%= link_to "Diwali", page_path('diwali') %><br /><br />
+
+        <font color="red" size="3"><b>Legends</b></font><br />
+        <%= link_to "Legend of Hanuman", page_path('hanuman') %><br />
+        <%= link_to "Legend of Ramapeer", page_path('ramapeerparcha') %><br />
+        <%= link_to "Ramnavami Festival", page_path('ramnavami') %><br />
+        <%= link_to "Shivratri Utsav", page_path('shivratri') %><br />
+        <%= link_to "Stories of Krishna", page_path('krishna') %><br /><br />
+
+        <font color="red" size="3"><b>Folksongs</b></font><br />
+        <%= link_to "Click Here", page_path('sspgmfolksongs') %><br /><br />
+
+        <font color="red" size="3"><b>Glossary of Terms</b></font><br />
+        <%= link_to "Click Here", page_path('sspgmglossary') %>
+      </center>
+    </div>
+
+    <div class="col-6" style="border-right:2px solid #CC3333; border-left:2px solid #CC3333;">
+      <center>
+        <%= link_to page_path('sspgmwelcome') do %>
+          <font color="#66CCFF">WELCOME NOTE</font>
+        <% end -%><br /><br />
+
+        <font color="yellow"><b>
+          We Would Like to Wish Our Members Worldwide a Happy Diwali and a Prosperous New Year 2073!
+        </b></font><br /><br />
+
+        <%= image_tag('shreebai2.jpg') %>
+      </center>
+    </div>
+
+    <div class="col">
+      <center>
+        <%= render "shared/right" %>
+      </center>
+    </div>
+  </div>
+</div>
