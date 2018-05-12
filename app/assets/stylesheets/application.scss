@@ -1,3 +1,5 @@
+@import "bootstrap";
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -14,34 +16,26 @@
  *= require_self
  */
 
-body {
-  background-color: black;
-  color: white;
-  margin: 0;
-}
+ body {
+   background-color: black;
+   color: white;
+   margin: 0;
+ }
 
-a {
-  font-family:arial, helvetica;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
+ a {
+   color: white;
+   font-weight: bold;
+   text-decoration: none;
+ }
 
-a:visited {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
+ a:visited {
+   color: white;
+ }
 
-a:hover {
-  color: #66CCFF;
-  font-weight: bold;
-  text-decoration:none;
-}
-
-font {
-  font-family: arial, helvetica;
-}
+ a:hover {
+   color: #66CCFF;
+   text-decoration: none;
+ }
 
 .application-notice:empty {
   display: none;
@@ -58,20 +52,30 @@ font {
 .alert-success {
   background-color: #dff0d8;
   border-color: #d0e9c6;
-  color: #3c763d; }
-  .alert-success hr {
-    border-top-color: #c1e2b3; }
-  .alert-success .alert-link {
-    color: #2b542c; }
+  color: #3c763d;
+}
+
+.alert-success hr {
+  border-top-color: #c1e2b3;
+}
+
+.alert-success .alert-link {
+  color: #2b542c;
+}
 
 .alert-danger {
   background-color: #f2dede;
   border-color: #ebcccc;
-  color: #a94442; }
-  .alert-danger hr {
-    border-top-color: #e4b9b9; }
-  .alert-danger .alert-link {
-    color: #843534; }
+  color: #a94442;
+}
+
+.alert-danger hr {
+  border-top-color: #e4b9b9;
+}
+
+.alert-danger .alert-link {
+  color: #843534;
+}
 
 .body-container {
   margin-top: 10px;

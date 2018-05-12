@@ -65,11 +65,17 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+# Bootstrap 4 Ruby Gem for Rails
+# https://github.com/twbs/bootstrap-rubygem
+gem 'bootstrap', '~> 4.1.1'
 # Flexible authentication solution for Rails with Warden
 # https://github.com/plataformatec/devise
 gem 'devise'
 # Easily include static pages in your Rails app.
 # https://github.com/thoughtbot/high_voltage
 gem 'high_voltage', '~> 3.0.0'
+# A gem to automate using jQuery with Rails
+# https://github.com/rails/jquery-rails
+gem 'jquery-rails'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
