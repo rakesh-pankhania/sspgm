@@ -1,22 +1,13 @@
-<center><h1 class="page-header">SSPGM Businesses Page</h1></center>
+<h1 class="page-header">SSPGM Businesses Page</h1>
 
-<table cellspacing="0" cellpadding="9" height="100%" width="1000"><tr>
+<div class="member-filters">
+  <% if @filter_by -%>
+    Filtering by "<%= @filter_by %>"<br />
+    <%= link_to "<< Return to all results", businesses_url %>
+    <br /><br />
+  <% end -%>
 
-<td width="70%" height="100%">
-<table cellspacing="0" cellpadding="7" height="100%" width="100%">
-<tr valign="top">
-<td><font size="2" color=white>
-
-<% if @filter_by -%>
-  Filtering by "<%= @filter_by %>"<br />
-  <%= link_to "<< Return to all results", businesses_url %><br /><br />
-<% else -%>
-  <table style="border: 2px solid steelblue">
-    <tr>
-      <td>
-        <font color="red"><b>Filter by...</b></font>
-      </td>
-    </tr>
+  <table>
     <tr valign="top">
     <% @filter_categories.each_slice(7) do |categories| -%>
       <td width="200">
@@ -26,8 +17,10 @@
       </td>
     <% end -%>
     </tr>
-</table>
-<% end -%><br /><br />
+  </table>
+</div>
+
+<br /><br />
 
 <% @businesses_by_category.each do |category, businesses| %>
   <font color="steelblue" size="3"><b><%= category %></b></font><br />
@@ -36,22 +29,3 @@
   <% end -%>
   <br />
 <% end %>
-
-</td>
-</tr>
-</table>
-
-</td>
-<td width="30%" height="100%">
-
-<table cellspacing="0" cellpadding="7" height="100%" width="100%" style="border-left: 2px solid #CC3333">
-<tr valign="top">
-<td align="center">
-<%= render 'shared/right' %>
-</td>
-</tr>
-</table>
-
-</td>
-</tr>
-</table>

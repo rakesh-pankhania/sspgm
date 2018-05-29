@@ -3,12 +3,11 @@ class BusinessesController < ApplicationController
 
   def index
     businesses = Business.all.order(:name)
+    @filter_categories = Business.all.order(:category).pluck('DISTINCT category')
 
     if params.key?(:category)
       @filter_by = params[:category]
       businesses = businesses.where(category: @filter_by)
-    else
-      @filter_categories = Business.all.order(:category).pluck('DISTINCT category')
     end
 
     @businesses_by_category = businesses.group_by(&:category)

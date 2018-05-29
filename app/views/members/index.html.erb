@@ -1,20 +1,13 @@
-<table cellspacing="0" cellpadding="9" height="100%" width="1000"><tr>
-
-<td valign="top" width="70%" height="100%">
-<table cellspacing="0" cellpadding="7" height="100%" width="100%">
-<tr valign="top">
-<td><font size="2" color=white>
-
 <p align="right">
 <% if user_signed_in? -%>
   <% if current_user.member %><%= link_to('My Information', edit_member_path(current_user.member)) %> | <% end -%>
-  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+  <%= link_to('Log out', destroy_user_session_path, method: :delete) %>
 <% else %>
-  <%= link_to('Login', new_user_session_path)  %>
+  <%= link_to('Log in', new_user_session_path)  %>
 <% end %>
 </p>
 
-<center><h1 class="page-header">SSPGM Directory</h1></center>
+<h1 class="page-header">SSPGM Directory</h1>
 
 <div class="member-filters">
   <% if @filter_by -%>
@@ -51,22 +44,3 @@
 
 <br /><br />
 <% end %>
-
-</td>
-</tr>
-</table>
-
-</td>
-<td width="30%" height="100%" valign="top">
-
-<table cellspacing="0" cellpadding="7" height="100%" width="100%" style="border-left: 2px solid #CC3333">
-<tr valign="top">
-<td align="center">
-<%= render 'shared/right' %>
-</td>
-</tr>
-</table>
-
-</td>
-</tr>
-</table>

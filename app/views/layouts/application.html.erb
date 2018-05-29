@@ -7,7 +7,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-118778240-1');
       </script>
     <% end -%>
@@ -21,20 +20,55 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <%= link_to "SSPGM.net", root_url, class: "navbar-brand" %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <%= link_to "Family Trees", page_path('familytrees/home'), class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Directories
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "Member Directory", members_path, class: "dropdown-item" %>
+              <%= link_to "Professional Directory", professionals_path, class: "dropdown-item" %>
+              <%= link_to "Business Directory", businesses_path, class: "dropdown-item" %>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Our Mandals
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "United States", page_path('sspgmatlanta'), class: "dropdown-item" %>
+              <%= link_to "United Kingdom", page_path('sspgmuk'), class: "dropdown-item" %>
+              <%= link_to "India", page_path('india'), class: "dropdown-item" %>
+              <%= link_to "Africa", page_path('africa'), class: "dropdown-item" %>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="application-notice alert-success"><%= notice %></div>
     <div class="application-notice alert-danger"><%= alert %></div>
 
     <div class="body-container">
       <%= yield %>
+    </div>
 
-      <div>
-        <center>
-          <%= link_to "About Us", page_path('aboutus') %>
-          <font color="red" size="2"><b> | </b></font>
-          <font color="white" size="2"><b>Copyright &copy; 2002-<%= DateTime.now.year %></b></font>
-        </center>
-      </div>
-
+    <div class="body-footer">
+      <center>
+        <%= link_to "About Us", page_path('aboutus') %>
+        <font color="red" size="2"><b> | </b></font>
+        <font color="white" size="2"><b>Copyright &copy; 2002-<%= DateTime.now.year %></b></font>
+      </center>
     </div>
   </body>
 </html>
