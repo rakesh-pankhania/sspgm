@@ -1,31 +1,36 @@
-<h1 class="page-header">SSPGM Professionals Page</h1>
-
-<div class="member-filters">
-  <% if @filter_by -%>
-    Filtering by "<%= @filter_by %>"<br />
-    <%= link_to "<< Return to all results", professionals_url %>
-    <br /><br />
-  <% end -%>
-
-  <table>
-    <tr valign="top">
-    <% @filter_categories.each_slice(5) do |categories| -%>
-      <td width="200">
-        <% categories.each do |category| %>
-          <%= link_to category, professionals_url(category: category) %><br />
-        <% end -%>
-      </td>
-    <% end -%>
-    </tr>
-  </table>
+<div class="row mb-3" style="border-bottom: 2px solid #33CCCC">
+  <center><h1 class="page-header">SSPGM Professionals</h1></center>
 </div>
 
-<br /><br />
+<div class="row">
+  <div class="col-4 filter-list">
+    <% style = @filter_by.nil? ? "active-filter" : "" %>
+    <%= link_to "All Categories", professionals_url, class: style %><br />
+    <% @filter_categories.each do |category| -%>
+      <% style = category == @filter_by ? "active-filter" : "" %>
+      <%= link_to category, professionals_url(category: category), class: style %><br />
+    <% end -%>
+  </div>
 
-<% @professionals_by_category.each do |category, professionals| %>
-  <font color="steelblue" size="3"><b><%= category %></b></font><br />
-  <% professionals.each do |professional| %>
-    <%= link_to professional.name, professional %><br />
-  <% end -%>
-  <br />
-<% end %>
+  <div class="col-8">
+    <% @professionals_by_category.each do |category, professionals| %>
+      <% professionals.each do |professional| %>
+        <div class="mb-4">
+          <h3><%= professional.first_name %><% if professional.middle_name %><%= " #{professional.middle_name}" %><% end %><%= " #{professional.last_name}" %></h3>
+          <% unless professional.graduation_degree.blank? %><%= professional.graduation_degree %><% unless professional.graduation_year.blank? %> (<%= professional.graduation_year %>)<br /><% end %><% end %>
+          <% unless professional.graduation_university.blank? %><%= professional.graduation_university %><br /><% end %>
+          <% unless professional.job_title.blank? %><b>Title: </b><%= professional.job_title %><br /><% end %>
+          <% unless professional.job_company.blank? %><b>Company: </b><%= professional.job_company %><br /><% end %>
+          <% unless professional.location.blank? %><b>Location: </b><%= professional.location %><br /><% end %>
+          <% unless professional.telephone.blank? %><b>Telephone: </b><%= professional.telephone %><br /><% end %>
+          <% unless professional.mobile.blank? %><b>Mobile: </b><%= professional.mobile %><br /><% end %>
+          <% unless professional.fax.blank? %><b>Fax: </b><%= professional.fax %><br /><% end %>
+          <% unless professional.email.blank? %><b>Email: </b><%= link_to professional.email, "mailto:#{professional.email}" %><br /><% end %>
+          <% unless professional.website.blank? %><b>Website: </b><%= link_to professional.website, url_with_http(professional.website) %><br /><% end %>
+          <% unless professional.spec.blank? %><b>Specification: </b><%= professional.spec %><br /><% end %>
+        </div>
+      <% end -%>
+      <br />
+    <% end %>
+  </div>
+</div>

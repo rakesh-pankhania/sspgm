@@ -13,9 +13,6 @@ class BusinessesController < ApplicationController
     @businesses_by_category = businesses.group_by(&:category)
   end
 
-  def show
-  end
-
   private
     def set_business
       @business = Business.find(params[:id])

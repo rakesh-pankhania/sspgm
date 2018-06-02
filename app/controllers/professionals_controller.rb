@@ -13,9 +13,6 @@ class ProfessionalsController < ApplicationController
     @professionals_by_category = professionals.group_by(&:category)
   end
 
-  def show
-  end
-
   private
 
     def set_professional
