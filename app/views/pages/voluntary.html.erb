@@ -1,32 +1,21 @@
-<center>
-<table width="700" height="600" border="1" cellspacing="0" cellpadding="10" bordercolor="#CC3333">
-<tr>
+<!-- TODO: Get these links to work -->
 
-<td width="70%" height="100%">
-<table border="1" height="100%" width="100%" cellspacing="0" cellpadding="5" bordercolor="#000080">
-<tr valign="top">
-<td>
-<br>
-<center>
-<h1><font color="#CC3333">Voluntary Services</font></h1>
-<p><p>
-<font color="#66CCFF" size="2"><b><i>For SSPGM Members Worldwide</i></b></font></center>
-<p>
-  <!-- TODO: Get these links to work -->
-<center><font color="yellow"><b>
+<h1 class="page-header">Voluntary Services</h1>
+
+<font color="yellow"><b>
 These members of our community are kindly donating their time and expertise
-for the welfare of our members worldwide
-</b></font></center>
+for the welfare of SSPGM members worldwide
+</b></font>
 <p><br>
 <font color="red"><b>Mauritiaus</b></font>
 <ul>
-<a href="http://www.sspgm.net/professional/viewcategory.php?category=Engineers">Hirji Valji Jadav - Civil Engineer</a>
+<%= link_to "Hirji Valji Jadav - Civil Engineer", professionals_path(category: "Engineers") %>
 </ul>
 <p>
 <font color="red"><b>United Kingdom</b></font>
 <ul>
-<a href="http://www.sspgm.net/professional/viewcategory.php?category=Medical">Dr. Bharat Pankhania - Doctor Communicable Diseases</a><br>
-<a href="http://www.sspgm.net/professional/viewcategory.php?category=Medical">Dr. Alison Pankhania - Dental Surgeon</a><br>
+<%= link_to "Dr. Bharat Pankhania - Doctor Communicable Diseases", professionals_path(category: "Medical") %><br />
+<%= link_to "Dr. Alison Pankhania - Dental Surgeon", professionals_path(category: "Medical") %>
 </ul>
 <p>
 <font color="red"><b>United States</b></font>
@@ -35,22 +24,3 @@ for the welfare of our members worldwide
 </ul>
 <p><br><br>
 <font color="yellow"><b>Would you like to be included on the Volunteer Listing? Email us at <a href="mailto:shiladhiru@yahoo.com">shiladhiru@yahoo.com</a></b></font>
-</td>
-</tr>
-</table>
-</td>
-<td width="30%" height="100%">
-<table border="1" height="100%" width="100%" cellspacing="0" cellpadding="5" bordercolorlight="#000080" bordercolordark="#000080">
-<tr valign="top">
-<td>
-<center>
-<%= render 'shared/right' %>
-</center>
-</td>
-</tr>
-</table>
-</td>
-
-</tr>
-</table>
-</center>

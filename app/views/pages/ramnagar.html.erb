@@ -1,48 +1,24 @@
-<center>
-<table width="700" height="600" border="1" cellspacing="0" cellpadding="10" bordercolorlight="#CC3333" bordercolordark="#CC3333">
-<tr>
+<div class="container mb-4 mt-4 ">
+  <div class="row">
 
-<td width="70%" height="100%">
-<table border="1" height="100%" width="100%" cellspacing="0" cellpadding="5" bordercolorlight="#000080" bordercolordark="#000080">
-<tr valign="top">
-<td>
-<center>
-<br>
-<font color="red" size="4">
-<b>
-Welcome to the Ramnagar Mandal
-</b>
-</font>
-<p>
-</center>
-</td>
-</tr>
-</table>
-</td>
-<!-- Links-->
-<td width="30%" height="100%">
-<table border="1" height="100%" width="100%" cellspacing="0" cellpadding="5" bordercolorlight="#000080" bordercolordark="#000080">
-<tr valign="top">
-<td>
-<center>
-<br>
-<%= link_to root_url do %>
-<font color="yellow" size="3">
-Back to Main
-</font>
-<% end -%>
-<p>
-  <font color="red"><b>
-Features
-</b>
-</font>
-<br>
-<%= link_to "Committee Members", page_path('ramnagarcommittee') %>
-<p>
-<%= render 'shared/india_left' %>
-</table>
-</td>
+    <div class="col-8" style="border-right:2px solid #CC3333; height: 400px;">
 
-</tr>
-</table>
-</center>
+      <center><h1 class="page-header">
+        SSPGM Ramnagar Mandal
+      </h1></center>
+
+    </div>
+
+    <div class="col-4">
+      <center>
+
+        <font color="red"><b>Features</b></font><br />
+        <%= link_to "Committee Members", page_path('ramnagarcommittee') %><br /><br />
+
+        <%= render 'shared/india_right' %>
+
+      </center>
+    </div>
+
+  </div>
+</div>

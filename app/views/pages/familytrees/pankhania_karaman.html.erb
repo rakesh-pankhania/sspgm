@@ -1,31 +1,12 @@
-<center><h1><font color="#CC3333">
-Welcome to the Karaman Pankhania Family Tree
-</font></h1></center>
-<p>
-<center>
-<table border="0" cellpadding="9" cellspacing="0" width="700">
-<tr>
-<td>
-
-<center>
+<h1 class="page-header">Karaman Pankhania Family Tree</h1>
 
 <% karaman_profile = FamilyMember.where(first_name: "Karaman", last_name: "Pankhania").first! %>
 <%= link_to family_member_path(karaman_profile) do %>
   <font color="steelblue" size="5">Click Here for the Karaman Pankhania Family Tree</font>
 <% end -%>
 
-</center>
-
-<p><br><br>
+<br><br>
 
 <font color="#66CCFF" size="3"><b>
-This Karaman Pankhania Family Tree was submitted by Naresh Jetha Pankhania, Australia
-
-<p>
+This Karaman Pankhania Family Tree was submitted by Naresh Jetha Pankhania, Australia<br />
 <font color="red" size="3">Please note: The information is subject to change as the data is verified and updated.</font>
-</center>
-
-</td>
-</tr>
-</table>
-</center>

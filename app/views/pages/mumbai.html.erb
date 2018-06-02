@@ -1,62 +1,28 @@
-<center>
-<table bordercolorlight="#CC3333" bordercolordark="#CC3333" border="1"
- cellpadding="10" cellspacing="0" height="600" width="700">
-  <tbody>
-    <tr>
-      <td height="100%" width="70%">
-      <table bordercolorlight="#000080" bordercolordark="#000080"
- border="1" cellpadding="5" cellspacing="0" height="100%" width="100%">
-        <tbody>
-          <tr valign="top">
-            <td>
-            <center><br>
-            <font color="red" size="4">
-            <b>Welcome to the Mumbai Mandal
-            </b></font><br /><br />
-            <%= link_to page_path('mumbaiintro') do %>
-              <font color="#66ccff" size="3">Click Here for a Brief Introduction of the Mumbai Mandal</font>
-            <% end -%>
-            </p>
-            <p><br>
-            <%= link_to image_tag('mumbaibuilding.jpg', height: 150, width: 150), image_path('mumbaibuilding.jpg') %>
-            <br>
-            <font color="red" size="2">
-Click on Picture to Enlarge
-            </font></p>
-            <p><br>
+<div class="container mb-4 mt-4 ">
+  <div class="row">
 
-<%= link_to "Lunai Mataji Education Trust Fund", page_path('educationtrust') %>
-            </a></p>
-            </center>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      </td>
-      <td height="100%" width="30%">
-      <table bordercolorlight="#000080" bordercolordark="#000080"
- border="1" cellpadding="5" cellspacing="0" height="100%" width="100%">
-        <tbody>
-          <tr valign="top">
-            <td>
-            <center><br>
-            <%= link_to root_url do %>
-            <font color="yellow" size="3">Back to Main
-            </font><% end -%>
-            <p><font color="red" size="3">
-            <b>Features
-            </b></font>
-            <br>
-            <%= link_to "President", page_path('mumbaipresident') %><br />
-            <%= link_to "Executive Committee", page_path('mumbaiexec') %>
-            <br><br>
+    <div class="col-8" style="border-right:2px solid #CC3333; height: 400px;">
 
-            <%= render 'shared/india_left' %>
+      <center><h1 class="page-header">
+        SSPGM Mumbai Mandal
+      </h1>
+        <%= link_to image_tag('mumbaibuilding.jpg', height: 150, width: 150), image_path('mumbaibuilding.jpg') %>
+    </center>
 
-        </tbody>
-      </table>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</center>
+    </div>
+
+    <div class="col-4">
+      <center>
+
+        <font color="red"><b>Features</b></font><br />
+        <%= link_to "Introduction", page_path('mumbaiintro') %><br />
+        <%= link_to "The Executive Committee", page_path('mumbaiexec') %><br />
+        <%= link_to "Lunai Mataji Education Trust Fund", page_path('educationtrust') %><br /><br />
+
+        <%= render 'shared/india_right' %>
+
+      </center>
+    </div>
+
+  </div>
+</div>

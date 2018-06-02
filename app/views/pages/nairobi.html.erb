@@ -1,74 +1,41 @@
-<center>
-<table border="1" cellspacing="0" cellpadding="9" width="900" bordercolor="#CC3333">
-<tr>
-<td width="25%" height="100%">
+<div class="container mb-4 mt-4 ">
+  <div class="row">
 
-<table border="1" cellspacing="0" cellpadding="7" height="600" width="100%" bordercolor="#000080">
-<tr valign="top">
-<td align="center">
-<%= render 'shared/africa_left' %>
-</td>
-</tr>
-</table>
+    <div class="col-8" style="border-right:2px solid #CC3333">
+      <center>
+        <h1 class="page-header">SSPGM Nairobi Mandal</h1>
 
-</td>
-<td width="50%" height="100%">
+        <font color="#66CCFF"><i><b>Establishment of Shree Sorathia Prajapati Gnati Mandal, Nairobi</b></i></font>
+        <br />
+        <%= link_to image_tag('nairobi1.jpg', width: "180", height: "145"), image_path('nairobi1.jpg') %>
+        <br />
 
-<table border="1" cellspacing="0" cellpadding="7" height="600" width="100%" bordercolor="#000080">
-<tr valign="top">
-<td align="center">
-<center><h1><font color="#CC3333">
-Welcome to the Nairobi Mandal
-</font></h1></center>
-<p>
-<%= link_to "Click Here for the History of the Nairobi Mandal", page_path('nairobihistory') %>
-<p>
-<font color="#66CCFF"><i><b>
-Establishment of Shree Sorathia Prajapati Gnati Mandal, Nairobi
-</b></i></font>
-<br>
-<%= link_to image_tag('nairobi1.jpg', width: "180", height: "145"), image_path('nairobi1.jpg') %>
-<br>
-<font color="red"><i>
-August 2nd, 1930
-</i></font>
-<p>
-<font color="#66CCFF"><b><i>
-Establishment of Shree Sorathia Prajapati Gnati Mandal - Committee Members, Nairobi
-</i></b></font>
-<br>
-<%= link_to image_tag('nairobi2.jpg', width: "180", height: "145"), image_path('nairobi2.jpg') %>
-<br>
-<font color="red"><i>
-1973
-</i></font>
-</center>
-</td>
-</tr>
-</table>
+        <font color="red"><i>
+        August 2nd, 1930
+        </i></font>
 
-</td>
-<td width="25%" height="100%">
+        <br /><br />
 
-<table border="1" cellspacing="0" cellpadding="7" height="600" width="100%" bordercolor="#000080">
-<tr valign="top">
-<td align="center">
-<%= link_to root_url do %><font color="yellow">Back to Main</a><% end -%>
-<p>
-<font color="red"><b>
-Features
-</b></font><br>
+        <font color="#66CCFF"><b><i>
+        Establishment of Shree Sorathia Prajapati Gnati Mandal - Committee Members, Nairobi
+        </i></b></font>
+        <br>
+        <%= link_to image_tag('nairobi2.jpg', width: "180", height: "145"), image_path('nairobi2.jpg') %>
+        <br>
+        <font color="red"><i>1973</i></font>
+      </center>
+    </div>
 
-<%= link_to "About the Mandal", page_path('nairobi_about') %><br>
-<%= link_to "Mandal History", page_path('nairobihistory') %><br>
-<%= link_to "Photo Gallery", page_path('nairobi_photos') %><br>
-<%= link_to "Temple Project", page_path('nairobi_temple') %><br><br>
+    <div class="col-4">
+      <center>
+        <font color="red"><b>Features</b></font><br>
+        <%= link_to "About the Mandal", page_path('nairobi_about') %><br>
+        <%= link_to "Mandal History", page_path('nairobihistory') %><br>
+        <%= link_to "Photo Gallery", page_path('nairobi_photos') %><br>
+        <%= link_to "Temple Project", page_path('nairobi_temple') %><br><br>
 
-</td>
-</tr>
-</table>
+      </center>
+    </div>
 
-</td>
-</tr>
-</table>
-</center>
+  </div>
+</div>

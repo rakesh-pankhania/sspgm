@@ -1,97 +1,33 @@
-<center>
+<div class="container mb-4 mt-4 ">
+  <div class="row">
 
-<table width="600" border="0" cellpadding="0" cellspacing="0">
-<tr>
-<td colspan="2">
-	<table width="600" border="0" cellspacing="0" cellpadding="0">
-	<tr>
-	<td width="50%" bgcolor="red">
-        <div align="right">
+    <div class="col-8" style="border-right:2px solid #CC3333; height: 400px;">
 
+      <center><h1 class="page-header">
+        SSPGM Jamnagar Mandal
+      </h1>
+      <p>
+        <%= image_tag('indmap.gif', width: "225", height: "150") %>
+      <p>
+      <font color="red"><b>
+      Information submitted by <a href="mailto:kukadia@indiatimes.com">Rajesh Kukadia</a> of Baroda (Vadodara), India
+      </b></font>
 
-        </font>
-        </div>
-	</td>
-	<td width="50%" bgcolor="red">
-	</div>
-	</td>
-	</tr>
-	</table>
-</td>
-</tr>
+    </center>
 
+    </div>
 
+    <div class="col-4">
+      <center>
 
-<tr>
-<td valign="top" bgcolor="black">
-<center>
-   <table width="100%" cellpadding="2" cellspacing="2" border="0">
-   <tr>
-   <td valign="top" width="400" bgcolor="#003366">
+        <font color="red"><b>Features</b></font><br />
+        <%= link_to "History", page_path('jamanagarhistory') %><br />
+        <%= link_to "The Executive Committee", page_path('jam2') %><br /><br />
 
+        <%= render 'shared/india_right' %>
 
+      </center>
+    </div>
 
-
-
-
-
-    <table width="100%" bgcolor="red" border="0" cellpadding="4" cellspacing="0">
-
-
-    <tr><td bgcolor="black">
-	<font face="arial" size="3" color="red">
-
-
-<center><font face="arial" size="4" color="red">Welcome to the Jamnagar Mandal </font> </center><br>
-
-<font size=5><b><I><div align="center"><font face="arial" size="2" color="yellow"><b></b>
-  <%= link_to page_path('jamanagarhistory') do %>
-    <font color="#66CCFF">CLICK HERE for the History of Jamnagar Mandal</font>
-  <% end -%><br><br>
-	<p></center>
-<br>
-<center><%= image_tag('indmap.gif', width: "225", height: "150") %><br></center>
-
-
-
-
-                    <p align="center"><font color="#FFCC99" face="Verdana" size="1"><br>
-                    </font>
-
-
-
-
-</dl>
-</p>
-
-
-
-
-</font>
-
-    </td></tr>
-    </table>
-   </td>
-
-   <td valign="top" width="200">
-
-   <font face="arial" size="2">
-
-   <center><b><br><%= link_to root_url do %><font color="Yellow">BACK TO MAIN</font><% end -%></b>
-   <br><br></center>
-
-
-   <center><b><font color="red"> Features</b></center>
-   <center>
-<%= link_to "The President", page_path('jam1') %><br />
-<%= link_to "The Executive Committee", page_path('jam2') %><p>
-
-   <%= render 'shared/india_left' %>
-
-   </td>
-   </tr>
-   </table>
-</center>
-</td>
-</tr>
-</table>
+  </div>
+</div>

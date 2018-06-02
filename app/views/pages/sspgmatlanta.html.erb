@@ -1,69 +1,32 @@
-<center>
-<table border="1" cellspacing="0" cellpadding="9" width="900" bordercolor="#CC3333">
-<tr>
-<td width="25%" height="100%">
+<div class="container mb-4 mt-4 ">
+  <div class="row">
 
-<table border="1" cellspacing="0" cellpadding="7" height="100%" width="100%" bordercolor="#000080">
-<tr valign="top">
-<td  align="center">
-<%= render 'shared/us_left' %>
-</td>
-</tr>
-</table>
+    <div class="col-8" style="border-right:2px solid #CC3333; height: 400px">
+      <center>
+        <h1 class="page-header">SSPGM Atlanta Mandal</h1>
 
-</td>
-<td width="50%" height="100%">
+        <%= image_tag 'atlpic4.jpg', height: "150", width: "225" %><br /><br /><br />
 
-<table border="1" cellspacing="0" cellpadding="7" height="100%" width="100%" bordercolor="#000080">
-<tr valign="top">
-<td>
-<p><br><p>
-<center><%= image_tag 'atlpic4.jpg', height: "150", width: "225" %><br><br><br>
+      </center>
+    </div>
 
-<%= link_to page_path('atlantawelcome') do %>
-  <font color="steelblue">
-  CLICK HERE for the History of the Atlanta Mandal
-  </font>
-<% end -%>
-  <p>
+    <div class="col-4">
+      <center>
+        <font color="red"><b>Features</b></font><br>
+        <%= link_to "Mandal History", page_path('atlantawelcome') %><br />
+        <%= link_to "Constitution", page_path('usconstitution') %><br />
+        <%= link_to "Committee 2003 - 2005", page_path('pres2003') %><br>
+        <%= link_to "Committee 2000 - 2003", page_path('sspgmatlpres') %><br><br>
 
-<%= link_to page_path('usconstitution') do %>
-  <font color="red">
-  CLICK HERE for the SSPGM, USA Constitution
-  </font>
-<% end -%>
-<p>
-</td>
-</tr>
-</table>
+        <font color="red"><b>Photo Archives</b></font><br>
+        <%= link_to "Click Here", page_path('sspgmphotos') %><br><br>
 
-</td>
-<td width="25%" height="100%">
+        <font color="red"><b>Events</b></font><br>
+        <%= link_to "2001 India Earthquake Relief Fund", page_path('relieffund') %><br>
+        <%= link_to "2002 Easter", page_path('easter2002') %><br>
+        <%= link_to "2004 Sundarkand Path", page_path('sundarkandphotos') %><p>
+      </center>
+    </div>
 
-<table border="1" cellspacing="0" cellpadding="7" height="100%" width="100%" bordercolor="#000080">
-<tr valign="top">
-<td align="center">
-<%= link_to root_url do %>
-  <font color="yellow">Back to Main</font>
-<% end -%><p>
-
-<font color="red"><b>Features</b></font><br>
-<%= link_to "Committee 2003 - 2005", page_path('pres2003') %><br>
-<%= link_to "Committee 2000 - 2003", page_path('sspgmatlpres') %><p>
-
-<font color="red"><b>Photo Archives</b></font><br>
-<%= link_to "Click Here", page_path('sspgmphotos') %><p>
-
-<font color="red"><b>Events</b></font><br>
-<%= link_to "2001 India Earthquake Relief Fund", page_path('relieffund') %><br>
-<%= link_to "2002 Easter", page_path('easter2002') %><br>
-<%= link_to "2004 Sundarkand Path", page_path('sundarkandphotos') %><p>
-
-</td>
-</tr>
-</table>
-
-</td>
-</tr>
-</table>
-</center>
+  </div>
+</div>

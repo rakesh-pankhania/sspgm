@@ -1,9 +1,40 @@
-<h1><font color="#CC3333"><center>
-Welcome to the Bolton Mandal President's Page
-</font></h1><p><br>
 
-<font color="white" size="3"><b>
-President/Chairman: Natwarlal Punja Fatania
-</b></font>
 
-</center>
+<div class="container mb-4 mt-4 ">
+  <div class="row">
+
+    <div class="col-8" style="border-right:2px solid #CC3333; height: 400px">
+
+      <center><h1 class="page-header">
+        SSPGM Bolton Mandal President
+      </h1></center>
+
+      <font color="white" size="3"><b>
+      President/Chairman: Natwarlal Punja Fatania
+      </b></font>
+
+      </center>
+
+
+
+
+
+    </div>
+
+    <div class="col-4">
+      <center>
+
+        <font color="red" size="3"><b>Features</b></font><br>
+        <%= link_to "History", page_path('ukboltonposition') %><br />
+        <%= link_to "President", page_path('ukboltonpresident.html') %><br>
+        <%= link_to "Executive Committee", page_path('ukboltonexecutive.html') %>
+
+        <br /><br />
+
+        <%= render 'shared/uk_right' %>
+
+      </center>
+    </div>
+
+  </div>
+</div>
