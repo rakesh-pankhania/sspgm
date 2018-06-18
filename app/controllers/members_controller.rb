@@ -4,7 +4,7 @@ class MembersController < ApplicationController
 
   def index
     @members = Member.all.order(:last_name, :first_name, :middle_name)
-    @filter_categories = Member.all.order(:country).pluck('DISTINCT country')
+    @filter_categories = Member.all.where.not(country: nil).order(:country).pluck('DISTINCT country')
 
     if params.key?(:country)
       @filter_by = params[:country]
