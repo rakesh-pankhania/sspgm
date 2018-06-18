@@ -55,9 +55,11 @@
         </ul>
         <ul class="nav navbar-nav ml-auto">
           <% if user_signed_in? %>
-          <li>
-            <%= link_to('My Account', edit_member_path(current_user.member), class: "nav-link") %>
-          </li>
+            <% if current_user.member.present? %>
+            <li>
+              <%= link_to('My Account', edit_member_path(current_user.member), class: "nav-link") %>
+            </li>
+            <% end -%>
           <li>
             <%= link_to('Log out', destroy_user_session_path, class: "nav-link", method: :delete) %>
           </li>
