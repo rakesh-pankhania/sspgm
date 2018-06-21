@@ -1,86 +1,76 @@
-<center><h1 class="page-header">Member Directory</h1></center>
+<%- professional_id = Professional.where(user_id: member.user_id).pluck(:id).first %>
+
+<div class="row mb-4">
+  <div class="col-4">
+    <h4><%= link_to "Basic Information", basic_member_path(member) %></h4>
+  </div>
+  <div class="col-4">
+    <h4><a href="#"><font color="#33CCCC">Directory Listing</font></a></h4>
+  </div>
+  <div class="col-4">
+    <h4><%= link_to "Professional Listing", edit_professional_path(professional_id) %></h4>
+  </div>
+</div>
 
 <%= form_with(model: member, validate: true) do |form| %>
   <div class="row">
-    <div class="col-4">
-      <div class="form-group">
-        <%= form.label :first_name %>
-        <%= form.text_field :first_name, class: "form-control form-control-lg" %>
-      </div>
-    </div>
-    <div class="col-3">
-      <div class="form-group">
-        <%= form.label :middle_name %>
-        <%= form.text_field :middle_name, class: "form-control form-control-lg" %>
-      </div>
-    </div>
-    <div class="col-5">
-      <div class="form-group">
-        <%= form.label :last_name %>
-        <%= form.text_field :last_name, class: "form-control form-control-lg" %>
-      </div>
+    <div class="form-group col-12">
+      <%= form.label :address %><br />
+      <%= form.text_field :address, class: "form-control" %>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-12">
-      <%= form.label :address %>
-      <%= form.text_field :address, class: "form-control form-control-lg" %>
+    <div class="form-group col-3">
+      <%= form.label :city %><br />
+      <%= form.text_field :city, class: "form-control" %>
     </div>
-  </div>
-
-  <div class="row">
-    <div class="col-3">
-      <%= form.label :city %>
-      <%= form.text_field :city, class: "form-control form-control-lg" %>
+    <div class="form-group col-3">
+      <%= form.label :state %><br />
+      <%= form.text_field :state, class: "form-control" %>
     </div>
-    <div class="col-3">
-      <%= form.label :state %>
-      <%= form.text_field :state, class: "form-control form-control-lg" %>
+    <div class="form-group col-3">
+      <%= form.label :country %><br />
+      <%= form.text_field :country, class: "form-control" %>
     </div>
-    <div class="col-3">
-      <%= form.label :country %>
-      <%= form.text_field :country, class: "form-control form-control-lg" %>
-    </div>
-    <div class="col-3">
-      <%= form.label :zip %>
-      <%= form.text_field :zip, class: "form-control form-control-lg" %>
+    <div class="form-group col-3">
+      <%= form.label :zip %><br />
+      <%= form.text_field :zip, class: "form-control" %>
     </div>
   </div>
 
   <div class="row mb-4">
     <div class="col-6">
       <%= form.label :telephone %>
-      <%= form.text_field :telephone, class: "form-control form-control-lg" %>
-    </div>
-    <div class="col-6">
-      <%= form.label :email %>
-      <%= form.text_field :email, class: "form-control form-control-lg" %>
+      <%= form.text_field :telephone, class: "form-control" %>
     </div>
   </div>
 
   <div class="row mb-4">
     <div class="col-6">
       <%= form.label :spouse %>
-      <%= form.text_field :spouse, class: "form-control form-control-lg" %>
-    </div>
-    <div class="col-6">
-      <%= form.label :children %>
-      <%= form.text_field :children, class: "form-control form-control-lg" %>
+      <%= form.text_field :spouse, class: "form-control" %>
     </div>
   </div>
 
-  <div class="row">
+  <div class="row mb-4">
+    <div class="col-6">
+      <%= form.label :children %>
+      <%= form.text_field :children, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row mb-4">
     <div class="col-12">
       <%= form.label :education %>
-      <%= form.text_field :education, class: "form-control form-control-lg" %>
+      <%= form.text_field :education, class: "form-control" %>
     </div>
   </div>
 
   <div class="row mb-4">
     <div class="col-12">
       <%= form.label :profession %>
-      <%= form.text_field :profession, class: "form-control form-control-lg" %>
+      <%= form.text_field :profession, class: "form-control" %>
     </div>
   </div>
 

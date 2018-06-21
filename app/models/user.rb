@@ -3,4 +3,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :timeoutable, :trackable, :validatable
 
   has_one :member
+  has_one :professional
 end

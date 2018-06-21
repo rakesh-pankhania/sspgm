@@ -1,0 +1,126 @@
+<%- member_id = Member.where(user_id: professional.user_id).pluck(:id).first %>
+
+<div class="row mb-4">
+  <div class="col-4">
+    <h4><%= link_to "Basic Information", basic_member_path(member_id) %></h4>
+  </div>
+  <div class="col-4">
+    <h4><%= link_to "Directory Listing", edit_member_path(member_id) %></h4>
+  </div>
+  <div class="col-4">
+    <h4><a href="#"><font color="#33CCCC">Professional Listing</font></a></h4>
+  </div>
+</div>
+
+<%= form_with(model: professional, validate: true) do |form| %>
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= form.label :first_name %><br />
+      <%= form.text_field :first_name, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= form.label :middle_name %><br />
+      <%= form.text_field :middle_name, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= form.label :last_name %><br />
+      <%= form.text_field :last_name, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4 form-group col-md-4">
+      <%= form.label :graduation_degree %><br />
+      <%= form.text_field :graduation_degree, class: "form-control" %>
+    </div>
+
+    <div class="col-4 form-group col-md-4">
+      <%= form.label :graduation_university %><br />
+      <%= form.text_field :graduation_university, class: "form-control" %>
+    </div>
+
+    <div class="col-4 form-group col-md-4">
+      <%= form.label :graduation_year %><br />
+      <%= form.text_field :graduation_year, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6 form-group">
+      <%= form.label :job_title %><br />
+      <%= form.text_field :job_title, class: "form-control" %>
+    </div>
+
+    <div class="col-6 form-group">
+      <%= form.label :job_company %><br />
+      <%= form.text_field :job_company, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= form.label :location %><br />
+      <%= form.text_field :location, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= form.label :telephone %><br />
+      <%= form.text_field :telephone, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= form.label :mobile %><br />
+      <%= form.text_field :mobile, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= form.label :fax %><br />
+      <%= form.text_field :fax, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= form.label :email %><br />
+      <%= form.text_field :email, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= form.label :website %><br />
+      <%= form.text_field :website, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= form.label :category %><br />
+      <%= form.collection_select :category, Professional.order(:category).select('DISTINCT category'), :category, :category, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= form.label :Specification %><br />
+      <%= form.collection_select :spec, Professional.order(:spec).select('DISTINCT spec'), :spec, :spec, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Save", class: "btn btn-primary" %>
+    <%= link_to "Cancel", members_url, class: "btn btn-secondary" %>
+  </div>
+<% end -%>

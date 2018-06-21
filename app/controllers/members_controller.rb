@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_member, only: [:edit, :update]
+  before_action :set_member, only: [:edit, :update, :basic]
 
   def index
     @members = Member.all.order(:last_name, :first_name, :middle_name)
@@ -13,6 +13,12 @@ class MembersController < ApplicationController
   end
 
   def edit
+    unless current_user.member && current_user.member == @member
+      redirect_to controller: 'members', action: 'index'
+    end
+  end
+
+  def basic
     unless current_user.member && current_user.member == @member
       redirect_to controller: 'members', action: 'index'
     end
