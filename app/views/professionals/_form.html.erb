@@ -14,6 +14,20 @@
 
 <%= form_with(model: professional, validate: true) do |form| %>
   <div class="row">
+    <div class="form-group col-md-6">
+      <%= form.radio_button :private, false, checked: true, value: false %>
+      <%= label :private, "Public", value: false %><br />
+      If this listing is public, it will be searchable on the internet and available for viewing by
+      anyone online.
+    </div>
+    <div class="form-group col-md-6">
+      <%= form.radio_button :private, true, value: true%>
+      <%= label :private, "Private", value: true %><br />
+      If this listing is private, only SSPGM members who have logged in will be able to view it.
+    </div>
+  </div>
+
+  <div class="row">
     <div class="form-group col-md-4">
       <%= form.label :first_name %><br />
       <%= form.text_field :first_name, class: "form-control" %>
