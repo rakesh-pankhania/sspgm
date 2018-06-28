@@ -1,11 +1,14 @@
-<%- member_id = Member.where(user_id: professional.user_id).pluck(:id).first %>
+<%- member_id = Member.where(person: professional.person).pluck(:id).first %>
+<%- person_id = professional.person_id %>
 
 <div class="row mb-4">
   <div class="col-4">
-    <h4><%= link_to "Basic Information", basic_member_path(member_id) %></h4>
+    <h4><%= link_to "Basic Information", edit_person_path(person_id) %></h4>
   </div>
   <div class="col-4">
-    <h4><%= link_to "Directory Listing", edit_member_path(member_id) %></h4>
+    <% if member_id -%>
+      <h4><%= link_to "Directory Listing", edit_member_path(member_id) %></h4>
+    <% end -%>
   </div>
   <div class="col-4">
     <h4><a href="#"><font color="#33CCCC">Professional Listing</font></a></h4>

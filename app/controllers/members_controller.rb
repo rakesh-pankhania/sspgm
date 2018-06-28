@@ -3,7 +3,7 @@ class MembersController < ApplicationController
   before_action :set_member, only: [:edit, :update, :basic]
 
   def index
-    @members = Member.all.order(:last_name, :first_name, :middle_name)
+    @members = Member.joins(:person).all.order('people.last_name', 'people.first_name', 'people.middle_name')
     @filter_categories = Member.all.where.not(country: nil).order(:country).pluck('DISTINCT country')
 
     if params.key?(:country)
@@ -13,19 +13,13 @@ class MembersController < ApplicationController
   end
 
   def edit
-    unless current_user.member && current_user.member == @member
-      redirect_to controller: 'members', action: 'index'
-    end
-  end
-
-  def basic
-    unless current_user.member && current_user.member == @member
+    unless current_user.person&.member && current_user.person.member == @member
       redirect_to controller: 'members', action: 'index'
     end
   end
 
   def update
-    unless current_user.member && current_user.member == @member
+    unless current_user.person&.member && current_user.person.member == @member
       redirect_to controller: 'members', action: 'index'
     else
       @member.update(member_params)
@@ -48,8 +42,7 @@ class MembersController < ApplicationController
 
     def member_params
       params.require(:member)
-            .permit(:first_name, :middle_name, :last_name, :spouse, :telephone,
-                    :address, :city, :state, :zip, :country, :email, :children,
-                    :education, :profession)
+            .permit(:spouse, :telephone, :address, :city, :state, :zip,
+                    :country, :email, :children, :education, :profession)
     end
 end

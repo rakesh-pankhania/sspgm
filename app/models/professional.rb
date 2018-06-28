@@ -1,7 +1,5 @@
 class Professional < ApplicationRecord
-  belongs_to :user, optional: true
+  belongs_to :person
 
-  def name
-    "#{first_name} #{last_name}"
-  end
+  delegate :full_name, to: :person
 end

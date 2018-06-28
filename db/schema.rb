@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180621144121) do
+ActiveRecord::Schema.define(version: 20180624025343) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,9 +56,6 @@ ActiveRecord::Schema.define(version: 20180621144121) do
   end
 
   create_table "members", force: :cascade do |t|
-    t.string "first_name", null: false
-    t.string "middle_name"
-    t.string "last_name", null: false
     t.string "spouse"
     t.string "telephone"
     t.string "address"
@@ -72,14 +69,21 @@ ActiveRecord::Schema.define(version: 20180621144121) do
     t.string "profession"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "person_id"
+    t.index ["person_id"], name: "index_members_on_person_id"
+  end
+
+  create_table "people", force: :cascade do |t|
+    t.string "first_name", null: false
+    t.string "middle_name"
+    t.string "last_name", null: false
     t.bigint "user_id"
-    t.index ["user_id"], name: "index_members_on_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_people_on_user_id"
   end
 
   create_table "professionals", force: :cascade do |t|
-    t.string "first_name"
-    t.string "middle_name"
-    t.string "last_name"
     t.string "picture"
     t.string "graduation_degree"
     t.string "graduation_university"
@@ -96,9 +100,9 @@ ActiveRecord::Schema.define(version: 20180621144121) do
     t.string "spec"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id"
     t.boolean "private", default: false
-    t.index ["user_id"], name: "index_professionals_on_user_id"
+    t.bigint "person_id"
+    t.index ["person_id"], name: "index_professionals_on_person_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -128,6 +132,6 @@ ActiveRecord::Schema.define(version: 20180621144121) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
-  add_foreign_key "members", "users"
-  add_foreign_key "professionals", "users"
+  add_foreign_key "members", "people"
+  add_foreign_key "professionals", "people"
 end

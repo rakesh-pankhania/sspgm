@@ -3,7 +3,7 @@ class ProfessionalsController < ApplicationController
   before_action :set_professional, only: [:show, :edit, :update, :destroy]
 
   def index
-    professionals = Professional.all.order(:last_name, :first_name)
+    professionals = Professional.joins(:person).all.order('people.last_name', 'people.first_name', 'people.middle_name')
     @filter_categories = Professional.all.order(:category).pluck('DISTINCT category')
 
     unless user_signed_in?
@@ -19,13 +19,13 @@ class ProfessionalsController < ApplicationController
   end
 
   def edit
-    unless current_user.professional && current_user.professional == @professional
+    unless current_user.person&.professional && current_user.person.professional == @professional
       redirect_to controller: 'professionals', action: 'index'
     end
   end
 
   def update
-    unless current_user.professional && current_user.professional == @professional
+    unless current_user.person&.professional && current_user.person.professional == @professional
       redirect_to controller: 'professionals', action: 'index'
     else
       @professional.update(professional_params)
@@ -48,10 +48,9 @@ class ProfessionalsController < ApplicationController
 
     def professional_params
       params.require(:professional).permit(
-        :first_name, :middle_name, :last_name, :graduation_degree,
-        :graduation_university, :graduation_year, :job_title, :job_company,
-        :location, :telephone, :mobile, :fax, :email, :website, :category,
-        :spec, :private
+        :graduation_degree, :graduation_university, :graduation_year,
+        :job_title, :job_company, :location, :telephone, :mobile, :fax, :email,
+        :website, :category, :spec, :private
       )
     end
 end

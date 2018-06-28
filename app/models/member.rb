@@ -1,10 +1,5 @@
 class Member < ApplicationRecord
-  belongs_to :user, optional: true
+  belongs_to :person
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-
-  def full_name
-    "#{first_name} #{last_name}"
-  end
+  delegate :full_name, to: :person
 end

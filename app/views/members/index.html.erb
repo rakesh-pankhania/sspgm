@@ -15,7 +15,7 @@
   <div class="col-8">
     <% @members.each do |member| %>
       <div class="mb-4">
-        <h3><%= member_name(member) %>  </h3>
+        <h3><%= member.full_name %>  </h3>
         <% unless member.address.blank? %><%= member.address %><br /><% end %>
         <%= "#{member.city}, #{member.state} #{member.zip} #{member.country}" %><br />
         <% unless member.telephone.blank? %>Tel: <%= member.telephone %><br /><% end %>
