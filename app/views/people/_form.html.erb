@@ -1,12 +1,8 @@
 <%- professional_id = person.professional&.id %>
-<%- member_id = person.member&.id %>
 
 <div class="row mb-4">
   <div class="col-4">
     <h4><a href="#"><font color="#33CCCC">Basic Information</font></a></h4>
-  </div>
-  <div class="col-4">
-    <h4><%= link_to "Directory Listing", edit_member_path(member_id) %></h4>
   </div>
   <div class="col-4">
     <% if professional_id -%>
@@ -31,8 +27,18 @@
     <%= form.text_field :last_name, class: "form-control" %>
   </div>
 
+  <div class="form-group col-md-4">
+    <%= form.label :city %><br />
+    <%= form.text_field :city, class: "form-control" %>
+  </div>
+
+  <div class="form-group col-md-4">
+    <%= form.label :country %><br />
+    <%= form.text_field :country, class: "form-control" %>
+  </div>
+
   <div class="actions">
     <%= form.submit "Save", class: "btn btn-primary" %>
-    <%= link_to "Cancel", members_url, class: "btn btn-secondary" %>
+    <%= link_to "Cancel", member_url, class: "btn btn-secondary" %>
   </div>
 <% end -%>
