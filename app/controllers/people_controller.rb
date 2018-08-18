@@ -7,9 +7,9 @@ class PeopleController < ApplicationController
   def update
     respond_to do |format|
       if @person.update(person_params)
-        format.html { redirect_to(members_path, { notice: 'Changes saved' }) }
+        format.html { redirect_to({ action: :edit }, { notice: 'Changes saved' }) }
       else
-        format.html { redirect_to({ action: :edit }, { alert: "Could not save changes" }) }
+        format.html { redirect_to({ action: :edit }, { alert: 'Could not save changes' }) }
       end
     end
   end
