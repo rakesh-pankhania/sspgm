@@ -68,7 +68,7 @@ end
 
 # Bootstrap 4 Ruby Gem for Rails
 # https://github.com/twbs/bootstrap-rubygem
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.3.1'
 # Flexible authentication solution for Rails with Warden
 # https://github.com/plataformatec/devise
 gem 'devise'
