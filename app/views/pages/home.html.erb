@@ -1,7 +1,40 @@
 <div class="container mb-4 mt-4 ">
   <div class="row">
 
-    <div class="col-8" style="border-right:2px solid #CC3333;">
+  <div class="col-4" style="border-right:2px solid #CC3333;">
+      <font color="#CC3333" size="3"><b>Features</b></font><br />
+      <!-- Surnames -->
+      <%= link_to "History of Surnames", page_path('sspgmsurnames') %><br />
+      <%= link_to "Kurdevi", page_path('sspgmkurdevi') %><br />
+      <%= link_to "Family Trees", page_path('familytrees/home') %><br />
+
+      <%= link_to "Sants & Bhaktas", page_path('sspgmsantsbhaktas') %><br />
+      <%= link_to "Folksongs", page_path('sspgmfolksongs') %><br /><br />
+      
+
+      <font color="#CC3333" size="3"><b>Articles</b></font><br />
+      <%= link_to "History Of SSPGM", page_path('sspgmhistory2') %><br />
+      <%= link_to "The Origin of the Gujarati Language", page_path('gujaratiorigin') %><br />
+      <%= link_to "SSPGM Members' Global Journey", page_path('journey') %><br />
+      <%= link_to "Shreebai Mataji's Story", page_path('sspgmshreebai2') %><br />
+      
+      <!-- Customs & Rituals -->
+      <%= link_to "Answers of Why", page_path('answersofwhy') %><br />
+      <%= link_to "Raksha Bandhan", page_path('rakshabandhan') %><br />
+      <%= link_to "Diwali", page_path('diwali') %><br />
+      <%= link_to "Glossary of Terms", page_path('sspgmglossary') %><br />
+
+      <!-- Legends -->
+      <%= link_to "Legend of Hanuman", page_path('hanuman') %><br />
+      <%= link_to "Legend of Ramapeer", page_path('ramapeerparcha') %><br />
+      <%= link_to "Ramnavami Festival", page_path('ramnavami') %><br />
+      <%= link_to "Shivratri Utsav", page_path('shivratri') %><br />
+      <%= link_to "Stories of Krishna", page_path('krishna') %><br /><br />
+
+      <% #= link_to "Testimonials", comments_path %>
+    </div>
+
+    <div class="col-8">
       <center>
         <%= link_to page_path('sspgmwelcome') do %>
           <font color="#66CCFF">Welcome to SSPGM.net! Read our welcome note</font>
@@ -15,54 +48,6 @@
         <br /><br />
 
         <%= image_tag('shreebai2.jpg') %>
-      </center>
-    </div>
-
-    <div class="col-4">
-      <center>
-        <font color="#CC3333" size="3"><b>Features</b></font><br />
-        <%= link_to "History Of SSPGM", page_path('sspgmhistory2') %><br />
-        <%= link_to "Shreebai Mataji's Story", page_path('sspgmshreebai2') %><br />
-        <%= link_to "Sants/Bhaktas", page_path('sspgmsantsbhaktas') %><br />
-        <%= link_to "Profiles of Elders", page_path('sspgmprofiles') %><br />
-        <%= link_to "Rising Stars", page_path('risingstars') %><br />
-        <%= link_to "The Origin of the Gujarati Language", page_path('gujaratiorigin') %><br />
-        <%= link_to "SSPGM Members' Global Journey", page_path('journey') %><br /><br />
-
-        <font color="#CC3333" size="3"><b>Surnames</b></font><br />
-        <%= link_to "History of Surnames", page_path('sspgmsurnames') %><br />
-        <%= link_to "Kurdevi", page_path('sspgmkurdevi') %><br />
-        <%= link_to "Nived", page_path('sspgmnived') %><br /><br />
-
-        <font color="#CC3333" size="3"><b>Customs &amp; Rituals</b></font><br />
-        <%= link_to "Answers of Why", page_path('answersofwhy') %><br />
-        <%= link_to "Raksha Bandhan", page_path('rakshabandhan') %><br />
-        <%= link_to "Diwali", page_path('diwali') %><br /><br />
-
-        <font color=#CC3333><b>Comments Page</b></font><br />
-        <%= link_to "Click Here", comments_path %><br /><br />
-
-        <font color=#CC3333><b>Educational Trust Funds</b></font><br />
-        <%= link_to "Click Here", page_path('trustfunds') %><br /><br />
-
-        <font color=#CC3333><b>Voluntary Services</b></font><br />
-        <%= link_to "Click Here", page_path('voluntary') %><br /><br />
-
-        <font color=#CC3333><b>Publications</b></font><br />
-        <%= link_to "Click Here", page_path('publications') %><br /><br />
-
-        <font color="#CC3333" size="3"><b>Legends</b></font><br />
-        <%= link_to "Legend of Hanuman", page_path('hanuman') %><br />
-        <%= link_to "Legend of Ramapeer", page_path('ramapeerparcha') %><br />
-        <%= link_to "Ramnavami Festival", page_path('ramnavami') %><br />
-        <%= link_to "Shivratri Utsav", page_path('shivratri') %><br />
-        <%= link_to "Stories of Krishna", page_path('krishna') %><br /><br />
-
-        <font color="#CC3333" size="3"><b>Folksongs</b></font><br />
-        <%= link_to "Click Here", page_path('sspgmfolksongs') %><br /><br />
-
-        <font color="#CC3333" size="3"><b>Glossary of Terms</b></font><br />
-        <%= link_to "Click Here", page_path('sspgmglossary') %>
       </center>
     </div>
 

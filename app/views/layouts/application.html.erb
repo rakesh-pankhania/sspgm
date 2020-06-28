@@ -29,15 +29,17 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <%= link_to "Family Trees", page_path('familytrees/home'), class: "nav-link" %>
+            <%= link_to('Content', page_path('home'), class: "nav-link") %>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Directories
+              Profiles
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to "Professional Directory", professionals_path, class: "dropdown-item" %>
-              <%= link_to "Business Directory", businesses_path, class: "dropdown-item" %>
+              <%= link_to "Professional Listings", professionals_path, class: "dropdown-item" %>
+              <%= link_to "Business Listings", businesses_path, class: "dropdown-item" %>
+              <%= link_to "Profiles of Elders", page_path('sspgmprofiles'), class: "dropdown-item" %>
+              <%= link_to "Rising Stars", page_path('risingstars'), class: "dropdown-item" %>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -49,6 +51,16 @@
               <%= link_to "United Kingdom", page_path('sspgmuk'), class: "dropdown-item" %>
               <%= link_to "India", page_path('india'), class: "dropdown-item" %>
               <%= link_to "Kenya - Nairobi", page_path('nairobi'), class: "dropdown-item" %>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Resources
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "Educational Trust Funds", page_path('trustfunds'), class: "dropdown-item" %>
+              <%= link_to "Voluntary Services", page_path('voluntary'), class: "dropdown-item" %>
+              <%= link_to "Publications", page_path('publications'), class: "dropdown-item" %>
             </div>
           </li>
         </ul>
