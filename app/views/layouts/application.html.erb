@@ -28,41 +28,10 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <%= link_to('Content', page_path('home'), class: "nav-link") %>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Profiles
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to "Professional Listings", professionals_path, class: "dropdown-item" %>
-              <%= link_to "Business Listings", businesses_path, class: "dropdown-item" %>
-              <%= link_to "Profiles of Elders", page_path('sspgmprofiles'), class: "dropdown-item" %>
-              <%= link_to "Rising Stars", page_path('risingstars'), class: "dropdown-item" %>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Our Mandals
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to "United States - Atlanta", page_path('sspgmatlanta'), class: "dropdown-item" %>
-              <%= link_to "United Kingdom", page_path('sspgmuk'), class: "dropdown-item" %>
-              <%= link_to "India", page_path('india'), class: "dropdown-item" %>
-              <%= link_to "Kenya - Nairobi", page_path('nairobi'), class: "dropdown-item" %>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Resources
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to "Educational Trust Funds", page_path('trustfunds'), class: "dropdown-item" %>
-              <%= link_to "Voluntary Services", page_path('voluntary'), class: "dropdown-item" %>
-              <%= link_to "Publications", page_path('publications'), class: "dropdown-item" %>
-            </div>
-          </li>
+          <li class="nav-item"><%= link_to('Home', page_path('home'), class: "nav-link") %></li>
+          <li class="nav-item"><%= link_to "Professionals", professionals_path, class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to "Businesses", businesses_path, class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to "Mandals", page_path('mandals'), class: "nav-link" %></li>
         </ul>
         <ul class="nav navbar-nav ml-auto">
           <% if user_signed_in? %>
@@ -76,7 +45,7 @@
           </li>
           <% else %>
           <li>
-            <%= link_to('Log in', new_user_session_path, class: "nav-link nav-link-black") %>
+            <%#= link_to('Log in', new_user_session_path, class: "nav-link nav-link-black") %>
           </li>
           <% end %>
         </ul>
