@@ -29,9 +29,9 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item"><%= link_to('Home', page_path('home'), class: "nav-link") %></li>
-          <li class="nav-item"><%= link_to "Professionals", professionals_path, class: "nav-link" %></li>
-          <li class="nav-item"><%= link_to "Businesses", businesses_path, class: "nav-link" %></li>
-          <li class="nav-item"><%= link_to "Mandals", page_path('mandals'), class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to "Professionals", professionals_path, class: "nav-link #{active_class_toggle_for(:professionals)}" %></li>
+          <li class="nav-item"><%= link_to "Businesses", businesses_path, class: "nav-link #{active_class_toggle_for(:businesses)}" %></li>
+          <li class="nav-item"><%= link_to "Mandals", page_path('mandals'), class: "nav-link #{active_class_toggle_for(:mandals)}" %></li>
         </ul>
         <ul class="nav navbar-nav ml-auto">
           <% if user_signed_in? %>
@@ -45,7 +45,7 @@
           </li>
           <% else %>
           <li>
-            <%#= link_to('Log in', new_user_session_path, class: "nav-link nav-link-black") %>
+            <% #= link_to('Log in', new_user_session_path, class: "nav-link nav-link-black") %>
           </li>
           <% end %>
         </ul>

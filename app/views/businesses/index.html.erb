@@ -1,9 +1,9 @@
-<div class="row mb-3" style="border-bottom: 2px solid #33CCCC">
+<div class="row" style="border-bottom: 2px solid #33CCCC">
   <center><h1 class="page-header">SSPGM Businesses</h1></center>
 </div>
 
 <div class="row">
-  <div class="col-4 filter-list">
+  <div class="col-4 p-3 filter-list" style="border-right:2px solid #33CCCC">
     <% style = @filter_by.nil? ? "active-filter" : "" %>
     <%= link_to "All Businesses", businesses_url, class: style %><br />
     <% @filter_categories.each do |category| -%>
@@ -12,7 +12,7 @@
     <% end -%>
   </div>
 
-  <div class="col-8">
+  <div class="col-8 p-3">
     <% @businesses_by_category.each do |category, businesses| %>
       <% businesses.each do |business| %>
         <div class="mb-4">
