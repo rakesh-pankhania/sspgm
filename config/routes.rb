@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   resources :members, only: [:edit, :index, :update]
   resources :people, only: [:edit, :update]
   resources :professionals, only: [:edit, :index, :update]
+
+  # Redirects for deleted content
+  get 'sspgmdedication', to: redirect('/sspgmsantsbhaktas')
+  get 'sspgmhistory2', to: redirect('/sspgmhistory3')
 end
