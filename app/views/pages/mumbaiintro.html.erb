@@ -1,7 +1,18 @@
 <div class="container mb-4 mt-4 ">
   <div class="row">
+    
+    <div class="col-4" style="border-right:2px solid #CC3333;">
 
-    <div class="col-8" style="border-right:2px solid #CC3333;">
+        <font color="red"><b>Features</b></font><br />
+        <%= link_to "Introduction", page_path('mumbaiintro') %><br />
+        <%= link_to "The Executive Committee", page_path('mumbaiexec') %><br />
+        <%= link_to "Lunai Mataji Education Trust Fund", page_path('educationtrust') %><br /><br />
+
+        <%= render 'shared/india_right' %>
+
+    </div>
+
+    <div class="col-8">
 
       <center><h1 class="page-header">
         SSPGM Mumbai Mandal Introduction
@@ -55,19 +66,6 @@
       <br><br>
       Last updated 7/20/03
 
-    </div>
-
-    <div class="col-4">
-      <center>
-
-        <font color="red"><b>Features</b></font><br />
-        <%= link_to "Introduction", page_path('mumbaiintro') %><br />
-        <%= link_to "The Executive Committee", page_path('mumbaiexec') %><br />
-        <%= link_to "Lunai Mataji Education Trust Fund", page_path('educationtrust') %><br /><br />
-
-        <%= render 'shared/india_right' %>
-
-      </center>
     </div>
 
   </div>

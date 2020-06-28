@@ -1,7 +1,17 @@
 <div class="container mb-4 mt-4 ">
   <div class="row">
 
-    <div class="col-8" style="border-right:2px solid #CC3333; height: 400px;">
+
+  <div class="col-4" style="border-right:2px solid #CC3333; height: 400px;">
+
+  <font color="red"><b>Features</b></font><br>
+  <%= link_to "The Executive Committee", page_path('talalaexec') %><br /><br />
+
+  <%= render 'shared/india_right' %>
+
+</div>
+
+    <div class="col-8">
 
       <center><h1 class="page-header">
         SSPGM Talala Mandal
@@ -14,17 +24,6 @@
       <font color="red">Website: </font><a href="http://www.shreebaiashram.org/">www.shreebaiashram.org</a><br>
       <font color="red">Email: </font><a href="mailto:shreebaiashram@yahoo.co.in">shreebaiashram@yahoo.co.in</a>
 
-    </div>
-
-    <div class="col-4">
-      <center>
-
-        <font color="red"><b>Features</b></font><br>
-        <%= link_to "The Executive Committee", page_path('talalaexec') %><br /><br />
-
-        <%= render 'shared/india_right' %>
-
-      </center>
     </div>
 
   </div>

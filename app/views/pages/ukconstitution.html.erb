@@ -1,7 +1,16 @@
 <div class="container mb-4 mt-4 ">
   <div class="row">
 
-    <div class="col-8" style="border-right:2px solid #CC3333">
+
+  <div class="col-4" style="border-right:2px solid #CC3333">
+    <font color="red"><b>Features</b></font><br>
+    <%= link_to "Mandal History", page_path('ukwelcome') %><br />
+    <%= link_to "Constitution", page_path('ukconstitution') %><br /><br />
+    
+    <%= render 'shared/uk_right' %>
+  </div>
+
+    <div class="col-8">
 
       <center><h1 class="page-header">Constitution of Shree Sorathia Prajapati Community UK (Established 1983)</h1></center>
 
@@ -233,16 +242,6 @@
       Shree Sorathia Prajapati Community U.K. was registered as an official charity on 25th March 1983.<br>
       <p align="right"><font size="2"><i>Registered Charity number 286801</i></font></p>
 
-    </div>
-
-    <div class="col-4">
-      <center>
-        <font color="red"><b>Features</b></font><br>
-        <%= link_to "Mandal History", page_path('ukwelcome') %><br />
-        <%= link_to "Constitution", page_path('ukconstitution') %><br /><br />
-        
-        <%= render 'shared/uk_right' %>
-      </center>
     </div>
 
   </div>
