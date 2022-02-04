@@ -105,6 +105,11 @@ a.call-out {
   color: yellow;
 }
 
+.row .col-vertical-scroll {
+  height: 100vh;
+  overflow-y: auto;
+}
+
 .footer {
   position: absolute;
   bottom: 0;

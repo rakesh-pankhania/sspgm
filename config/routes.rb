@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   # Redirects for deleted content
   get 'sspgmdedication', to: redirect('/sspgmsantsbhaktas')
   get 'sspgmhistory2', to: redirect('/sspgmhistory3')
+  get 'answersofwhy', to: redirect('/answers/index')
 end
