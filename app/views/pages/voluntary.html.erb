@@ -1,26 +1,49 @@
 <!-- TODO: Get these links to work -->
 
-<h1 class="page-header">Voluntary Services</h1>
+<%= render 'shared/new_styles' %>
 
-<font color="yellow"><b>
-These members of our community are kindly donating their time and expertise
-for the welfare of SSPGM members worldwide
-</b></font>
-<p><br>
-<font color="red"><b>Mauritiaus</b></font>
-<ul>
-<%= link_to "Hirji Valji Jadav - Civil Engineer", professionals_path(category: "Engineers") %>
-</ul>
-<p>
-<font color="red"><b>United Kingdom</b></font>
-<ul>
-<%= link_to "Dr. Bharat Pankhania - Doctor Communicable Diseases", professionals_path(category: "Medical") %><br />
-<%= link_to "Dr. Alison Pankhania - Dental Surgeon", professionals_path(category: "Medical") %>
-</ul>
-<p>
-<font color="red"><b>United States</b></font>
-<ul>
-<a href="mailto:toraltank@yahoo.com">Toral Tank - Interior Designer</a>
-</ul>
-<p><br><br>
-<font color="yellow"><b>Would you like to be included on the Volunteer Listing? Email us at <a href="mailto:shiladhiru@yahoo.com">shiladhiru@yahoo.com</a></b></font>
+<h1>Voluntary Services</h1>
+
+<p class="lead">These members of our community are kindly donating their time and expertise for the welfare of SSPGM members worldwide.</p>
+
+<div class="row">
+    <div class="card" style="width: 23rem;">
+        <div class="card-body">
+            <h5 class="card-title">Hirji Valji Jadav</h5>
+            Civil Engineer<br />
+            Mauritiaus<br />
+            <%= link_to "Professional Listing", professionals_path(category: "Engineers") %>
+        </div>
+    </div>
+
+    <div class="card" style="width: 23rem;">
+        <div class="card-body">
+            <h5 class="card-title">Dr. Bharat Pankhania</h5>
+            Doctor Communicable Diseases<br />
+            United Kingdom<br />
+            <%= link_to "Professional Listing", professionals_path(category: "Medical") %><br />
+        </div>
+    </div>
+
+    <div class="card" style="width: 23rem;">
+        <div class="card-body">
+            <h5 class="card-title">Dr. Alison Pankhania</h5>
+            Dental Surgeon<br />
+            United Kingdom<br />
+            <%= link_to "Professional Listing", professionals_path(category: "Medical") %>
+        </div>
+    </div>
+
+    <div class="card" style="width: 23rem;">
+        <div class="card-body">
+            <h5 class="card-title">Toral Tank</h5>
+            Interior Designer<br />
+            United States<br />
+            <a href="mailto:toraltank@yahoo.com">toraltank@yahoo.com</a>
+        </div>
+    </div>
+</div>
+
+<div class="mt-5">
+    Would you like to be included on the voluntary service listings? Email us at <a href="mailto:shiladhiru@yahoo.com">shiladhiru@yahoo.com</a>.
+</div>
