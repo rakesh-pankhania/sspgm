@@ -2,7 +2,7 @@ class BusinessesController < ApplicationController
   before_action :set_business, only: [:show, :edit, :update, :destroy]
 
   def index
-    businesses = Business.all.order(:name)
+    businesses = Business.where(deleted: false).order(:name)
     @filter_categories = Business.all.order(:category).pluck('DISTINCT category')
 
     if params.key?(:category)

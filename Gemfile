@@ -72,6 +72,9 @@ gem 'bootstrap', '~> 4.3.1'
 # Flexible authentication solution for Rails with Warden
 # https://github.com/plataformatec/devise
 gem 'devise'
+# Shim to load environment variables from .env into ENV
+# https://github.com/bkeepers/dotenv
+gem 'dotenv-rails'
 # Easily include static pages in your Rails app.
 # https://github.com/thoughtbot/high_voltage
 gem 'high_voltage', '~> 3.0.0'
