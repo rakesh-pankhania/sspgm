@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'high_voltage/pages#show', id: 'home'
+  root to: 'pages#show', id: 'home'
 
   resources :businesses, only: [:index]
   resources :comments, only: :index
@@ -18,4 +18,6 @@ Rails.application.routes.draw do
   get 'shreebhaimataji2', to: redirect('/folksongs/shreebhai_mataji_ni_prathna')
   get 'shreebhaimataji3', to: redirect('/folksongs/shreebhai_mataji_ni_arti')
   get 'shreebhaimataji4', to: redirect('/folksongs/shreebhai_mataji_no_thal')
+
+  get '*id' => 'pages#show', as: :page, format: false
 end
