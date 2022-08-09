@@ -1,82 +1,76 @@
 <%= render 'shared/new_styles' %>
 
+<%= link_to "Folksongs", page_path('folksongs/index'), class: 'list-group-item list-group-item-action list-group-item-primary mb-4' %>
+
 <div class="row">
   <div class="col-4 col-vertical-scroll">
     <div class="list-group list-group-flush">
         <a class="list-group-item list-group-item-info">Shreebai Mataji Folksongs</a>
-        <%= link_to "Shreebai Mataji Ni Prathna", "shreebhai_mataji_ni_prathna", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'shreebhai_mataji_ni_prathna' %>
-        <%= link_to "Shreebai Mataji Ni Arti", "shreebhai_mataji_ni_arti", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'shreebhai_mataji_ni_arti' %>
-        <%= link_to "Shreebai Mataji No Thal", "shreebhai_mataji_no_thal", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'shreebhai_mataji_no_thal' %>
+        <%= link_to "Shreebai Mataji Ni Prathna", "shreebhai_mataji_ni_prathna", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'shreebhai_mataji_ni_prathna' %>
+        <%= link_to "Shreebai Mataji Ni Arti", "shreebhai_mataji_ni_arti", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'shreebhai_mataji_ni_arti' %>
+        <%= link_to "Shreebai Mataji No Thal", "shreebhai_mataji_no_thal", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'shreebhai_mataji_no_thal' %>
     
         <a class="list-group-item list-group-item-info">Ganapati Bhajans</a>
-        <%= link_to "Partham pehelaa samariye re swaami tamane sundaaraa", "partham_pehelaa_samariye_re_swaami_tamane_sundaaraa", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'partham_pehelaa_samariye_re_swaami_tamane_sundaaraa' %>
-        <%= link_to "Gaa ee ye ganapati jagavandan", "gaa_ee_ye_ganapati_jagavandan", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'gaa_ee_ye_ganapati_jagavandan' %>
-        <%= link_to "Pratham samaru ganapati devaa, viddhaan lejo maaraa kaapi", "pratham_samaru_ganapati_devaa_viddhaan_lejo_maaraa_kaapi", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'pratham_samaru_ganapati_devaa_viddhaan_lejo_maaraa_kaapi' %>
+        <%= link_to "Partham pehelaa samariye re swaami tamane sundaaraa", "partham_pehelaa_samariye_re_swaami_tamane_sundaaraa", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'partham_pehelaa_samariye_re_swaami_tamane_sundaaraa' %>
+        <%= link_to "Gaa ee ye ganapati jagavandan", "gaa_ee_ye_ganapati_jagavandan", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'gaa_ee_ye_ganapati_jagavandan' %>
+        <%= link_to "Pratham samaru ganapati devaa, viddhaan lejo maaraa kaapi", "pratham_samaru_ganapati_devaa_viddhaan_lejo_maaraa_kaapi", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'pratham_samaru_ganapati_devaa_viddhaan_lejo_maaraa_kaapi' %>
     
         <a class="list-group-item list-group-item-info">Hanumaan Bhajans</a>
-        <%= link_to "Hanumaan Chalisa", "hanumaan_chalisa", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'hanumaan_chalisa' %>
-        <%= link_to "Mangala murati maaruta nandana", "mangala_murati_maaruta_nandana", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'mangala_murati_maaruta_nandana' %>
-        <%= link_to "Chale hanumana yaha aaye", "chale_hanumana_yaha_aaye", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'chale_hanumana_yaha_aaye' %>
+        <%= link_to "Hanumaan Chalisa", "hanumaan_chalisa", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'hanumaan_chalisa' %>
+        <%= link_to "Mangala murati maaruta nandana", "mangala_murati_maaruta_nandana", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'mangala_murati_maaruta_nandana' %>
+        <%= link_to "Chale hanumana yaha aaye", "chale_hanumana_yaha_aaye", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'chale_hanumana_yaha_aaye' %>
     
         <a class="list-group-item list-group-item-info">Raam Bhajans</a>
-        <%= link_to "Shri raamchandra kripaalu", "shri_raamchandra_kripaalu", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'shri_raamchandra_kripaalu' %>
+        <%= link_to "Shri raamchandra kripaalu", "shri_raamchandra_kripaalu", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'shri_raamchandra_kripaalu' %>
     
         <a class="list-group-item list-group-item-info">Thaar</a>
-        <%= link_to "Jamavaa aavone nandalaala re", "jamavaa_aavone_nandalaala_re", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'jamavaa_aavone_nandalaala_re' %>
-        <%= link_to "Tame bhojan karavaa aavone preme paronaa", "tame_bhojan_karavaa_aavone_preme_paronaa", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'tame_bhojan_karavaa_aavone_preme_paronaa' %>
+        <%= link_to "Jamavaa aavone nandalaala re", "jamavaa_aavone_nandalaala_re", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'jamavaa_aavone_nandalaala_re' %>
+        <%= link_to "Tame bhojan karavaa aavone preme paronaa", "tame_bhojan_karavaa_aavone_preme_paronaa", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'tame_bhojan_karavaa_aavone_preme_paronaa' %>
     
         <a class="list-group-item list-group-item-info">Aarati</a>
-        <%= link_to "Aanand mangal karu aarati", "aanand_mangal_karu_aarati", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'aanand_mangal_karu_aarati' %>
-        <%= link_to "Om jaya jagadiisha hare", "om_jaya_jagadiisha_hare", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'om_jaya_jagadiisha_hare' %>
+        <%= link_to "Aanand mangal karu aarati", "aanand_mangal_karu_aarati", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'aanand_mangal_karu_aarati' %>
+        <%= link_to "Om jaya jagadiisha hare", "om_jaya_jagadiisha_hare", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'om_jaya_jagadiisha_hare' %>
     
         <a class="list-group-item list-group-item-info">Kapoor Aarati</a>
-        <%= link_to "Kapoor gauram karunaa vataaram", "kapoor_gauram_karunaa_vataaram", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'kapoor_gauram_karunaa_vataaram' %>
+        <%= link_to "Kapoor gauram karunaa vataaram", "kapoor_gauram_karunaa_vataaram", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'kapoor_gauram_karunaa_vataaram' %>
     
         <a class="list-group-item list-group-item-info">Abh sop diyaa</a>
-        <%= link_to "Abh sop diyaa is jivan kaa", "abh_sop_diyaa_is_jivan_kaa", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'abh_sop_diyaa_is_jivan_kaa' %>
+        <%= link_to "Abh sop diyaa is jivan kaa", "abh_sop_diyaa_is_jivan_kaa", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'abh_sop_diyaa_is_jivan_kaa' %>
     
         <a class="list-group-item list-group-item-info">Bhajans, Geets and Dhuns</a>
-        <%= link_to "Bhakti karata chute mara prana", "bhakti_karata_chute_mara_prana", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'bhakti_karata_chute_mara_prana' %>
-        <%= link_to "Mukunda maadhava govinda bola", "mukunda_maadhava_govinda_bola", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'mukunda_maadhava_govinda_bola' %>
-        <%= link_to "Tumhi ho maata pitaa tumhi ho", "tumhi_ho_maata_pitaa_tumhi_ho", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'tumhi_ho_maata_pitaa_tumhi_ho' %>
-        <%= link_to "Tari ek ek par jaaye lakhni", "tari_ek_ek_par_jaaye_lakhni", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'tari_ek_ek_par_jaaye_lakhni' %>
-        <%= link_to "Hey sitaaraam tanaa satsangmaa", "hey_sitaaraam_tanaa_satsangmaa", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'hey_sitaaraam_tanaa_satsangmaa' %>
-        <%= link_to "Hari bola, hari bola, hari hari bola", "hari_bola", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'hari_bola' %>
-        <%= link_to "Raghupati raaghava raaja raam", "raghupati_raaghava_raaja_raam", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'raghupati_raaghava_raaja_raam' %>
-        <%= link_to "Aai malik tere bande hum", "aai_malik_tere_bande_hum", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'aai_malik_tere_bande_hum' %>
-        <%= link_to "Prabhu mane shak padyo man may", "prabhu_mane_shak_padyo_man_may", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'prabhu_mane_shak_padyo_man_may' %>
-        <%= link_to "Jesal kari le vichaar", "jesal_kari_le_vichaar", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'jesal_kari_le_vichaar' %>
-        <%= link_to "Prabhu tara charanoma amane tu leje", "prabhu_tara_charanoma_amane_tu_leje", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'prabhu_tara_charanoma_amane_tu_leje' %>
-        <%= link_to "Jamunaa jaramaa kesar ghori", "jamunaa_jaramaa_kesar_ghori", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'jamunaa_jaramaa_kesar_ghori' %>
-        <%= link_to "Sukhake saba saathii dukhamen na koii", "sukhake_saba_saathii_dukhamen_na_koii", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'sukhake_saba_saathii_dukhamen_na_koii' %>
-        <%= link_to "Dhuni re dhakhaavi beli ame taaraa naamani", "dhuni_re_dhakhaavi_beli_ame_taaraa_naamani", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'dhuni_re_dhakhaavi_beli_ame_taaraa_naamani' %>
-        <%= link_to "Paayo jii mainne raam ratan dhan paayo", "paayo_jii_mainne_raam_ratan_dhan_paayo", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'paayo_jii_mainne_raam_ratan_dhan_paayo' %>
-        <%= link_to "Siitaa raam siitaa raam siitaaraam kahiye", "siitaa_raam_siitaa_raam_siitaaraam_kahiye", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'siitaa_raam_siitaa_raam_siitaaraam_kahiye' %>
-        <%= link_to "Banavaarii re", "banavaarii_re", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'banavaarii_re' %>
-        <%= link_to "Bhagavaan merii naiyaa us paar lagaa denaa", "bhagavaan_merii_naiyaa_us_paar_lagaa_denaa", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'bhagavaan_merii_naiyaa_us_paar_lagaa_denaa' %>
-        <%= link_to "Mailii chaadar odh ke kaise dvaar tumhaare aauun", "mailii_chaadar_odh_ke_kaise_dvaar_tumhaare_aauun", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'mailii_chaadar_odh_ke_kaise_dvaar_tumhaare_aauun' %>
-        <%= link_to "Hamako manakii shakti denaa, mana vijaya karen", "hamako_manakii_shakti_denaa_mana_vijaya_karen", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'hamako_manakii_shakti_denaa_mana_vijaya_karen' %>
-        <%= link_to "Jyota se jyota jagaate chalo prema kii gangaa bahaate chalo", "jyota_se_jyota_jagaate_chalo_prema_kii_gangaa_bahaate_chalo", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'jyota_se_jyota_jagaate_chalo_prema_kii_gangaa_bahaate_chalo' %>
-        <%= link_to "Allaah tero naam, Ishvar tero naam", "allaah_tero_naam_ishvar_tero_naam", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'allaah_tero_naam_ishvar_tero_naam' %>
-        <%= link_to "Man tadapat hari darasan ko aaj", "man_tadapat_hari_darasan_ko_aaj", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'man_tadapat_hari_darasan_ko_aaj' %>
-        <%= link_to "Vaishnav jan to tene kahiye je", "vaishnav_jan_to_tene_kahiye_je", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'vaishnav_jan_to_tene_kahiye_je' %>
-        <%= link_to "Aisi lagi lagan, meera ho gai magan", "aisi_lagi_lagan_meera_ho_gai_magan", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'aisi_lagi_lagan_meera_ho_gai_magan' %>
-        <%= link_to "Rang de chunariya, rang de chunariya", "rang_de_chunariya_rang_de_chunariya", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'rang_de_chunariya_rang_de_chunariya' %>
-        <%= link_to "Tan ke tamboore mein", "tan_ke_tamboore_mein", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'tan_ke_tamboore_mein' %>
-        <%= link_to "Ita naa to karnaa swaami, jab praan tana se nikale", "ita_naa_to_karnaa_swaami_jab_praan_tana_se_nikale", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'ita_naa_to_karnaa_swaami_jab_praan_tana_se_nikale' %>
-        <%= link_to "Pinjare ke panchhii re", "pinjare_ke_panchhii_re", class: 'list-group-item list-group-item-action folksong-link', 'data-id': 'pinjare_ke_panchhii_re' %>
+        <%= link_to "Bhakti karata chute mara prana", "bhakti_karata_chute_mara_prana", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'bhakti_karata_chute_mara_prana' %>
+        <%= link_to "Mukunda maadhava govinda bola", "mukunda_maadhava_govinda_bola", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'mukunda_maadhava_govinda_bola' %>
+        <%= link_to "Tumhi ho maata pitaa tumhi ho", "tumhi_ho_maata_pitaa_tumhi_ho", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'tumhi_ho_maata_pitaa_tumhi_ho' %>
+        <%= link_to "Tari ek ek par jaaye lakhni", "tari_ek_ek_par_jaaye_lakhni", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'tari_ek_ek_par_jaaye_lakhni' %>
+        <%= link_to "Hey sitaaraam tanaa satsangmaa", "hey_sitaaraam_tanaa_satsangmaa", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'hey_sitaaraam_tanaa_satsangmaa' %>
+        <%= link_to "Hari bola, hari bola, hari hari bola", "hari_bola", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'hari_bola' %>
+        <%= link_to "Raghupati raaghava raaja raam", "raghupati_raaghava_raaja_raam", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'raghupati_raaghava_raaja_raam' %>
+        <%= link_to "Aai malik tere bande hum", "aai_malik_tere_bande_hum", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'aai_malik_tere_bande_hum' %>
+        <%= link_to "Prabhu mane shak padyo man may", "prabhu_mane_shak_padyo_man_may", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'prabhu_mane_shak_padyo_man_may' %>
+        <%= link_to "Jesal kari le vichaar", "jesal_kari_le_vichaar", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'jesal_kari_le_vichaar' %>
+        <%= link_to "Prabhu tara charanoma amane tu leje", "prabhu_tara_charanoma_amane_tu_leje", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'prabhu_tara_charanoma_amane_tu_leje' %>
+        <%= link_to "Jamunaa jaramaa kesar ghori", "jamunaa_jaramaa_kesar_ghori", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'jamunaa_jaramaa_kesar_ghori' %>
+        <%= link_to "Sukhake saba saathii dukhamen na koii", "sukhake_saba_saathii_dukhamen_na_koii", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'sukhake_saba_saathii_dukhamen_na_koii' %>
+        <%= link_to "Dhuni re dhakhaavi beli ame taaraa naamani", "dhuni_re_dhakhaavi_beli_ame_taaraa_naamani", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'dhuni_re_dhakhaavi_beli_ame_taaraa_naamani' %>
+        <%= link_to "Paayo jii mainne raam ratan dhan paayo", "paayo_jii_mainne_raam_ratan_dhan_paayo", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'paayo_jii_mainne_raam_ratan_dhan_paayo' %>
+        <%= link_to "Siitaa raam siitaa raam siitaaraam kahiye", "siitaa_raam_siitaa_raam_siitaaraam_kahiye", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'siitaa_raam_siitaa_raam_siitaaraam_kahiye' %>
+        <%= link_to "Banavaarii re", "banavaarii_re", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'banavaarii_re' %>
+        <%= link_to "Bhagavaan merii naiyaa us paar lagaa denaa", "bhagavaan_merii_naiyaa_us_paar_lagaa_denaa", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'bhagavaan_merii_naiyaa_us_paar_lagaa_denaa' %>
+        <%= link_to "Mailii chaadar odh ke kaise dvaar tumhaare aauun", "mailii_chaadar_odh_ke_kaise_dvaar_tumhaare_aauun", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'mailii_chaadar_odh_ke_kaise_dvaar_tumhaare_aauun' %>
+        <%= link_to "Hamako manakii shakti denaa, mana vijaya karen", "hamako_manakii_shakti_denaa_mana_vijaya_karen", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'hamako_manakii_shakti_denaa_mana_vijaya_karen' %>
+        <%= link_to "Jyota se jyota jagaate chalo prema kii gangaa bahaate chalo", "jyota_se_jyota_jagaate_chalo_prema_kii_gangaa_bahaate_chalo", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'jyota_se_jyota_jagaate_chalo_prema_kii_gangaa_bahaate_chalo' %>
+        <%= link_to "Allaah tero naam, Ishvar tero naam", "allaah_tero_naam_ishvar_tero_naam", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'allaah_tero_naam_ishvar_tero_naam' %>
+        <%= link_to "Man tadapat hari darasan ko aaj", "man_tadapat_hari_darasan_ko_aaj", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'man_tadapat_hari_darasan_ko_aaj' %>
+        <%= link_to "Vaishnav jan to tene kahiye je", "vaishnav_jan_to_tene_kahiye_je", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'vaishnav_jan_to_tene_kahiye_je' %>
+        <%= link_to "Aisi lagi lagan, meera ho gai magan", "aisi_lagi_lagan_meera_ho_gai_magan", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'aisi_lagi_lagan_meera_ho_gai_magan' %>
+        <%= link_to "Rang de chunariya, rang de chunariya", "rang_de_chunariya_rang_de_chunariya", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'rang_de_chunariya_rang_de_chunariya' %>
+        <%= link_to "Tan ke tamboore mein", "tan_ke_tamboore_mein", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'tan_ke_tamboore_mein' %>
+        <%= link_to "Ita naa to karnaa swaami, jab praan tana se nikale", "ita_naa_to_karnaa_swaami_jab_praan_tana_se_nikale", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'ita_naa_to_karnaa_swaami_jab_praan_tana_se_nikale' %>
+        <%= link_to "Pinjare ke panchhii re", "pinjare_ke_panchhii_re", class: 'list-group-item list-group-item-action toc-link', 'data-id': 'pinjare_ke_panchhii_re' %>
     </div>
   </div>
 
   <div class="col-8">
-    <div id="folksong-content"><p class="lead">Bhajans/Dhuns submitted by Dhiru Zina Pankhania, Atlanta, GA USA</p></div>
+    <div id="toc-content"><p class="lead">Bhajans/Dhuns submitted by Dhiru Zina Pankhania, Atlanta, GA USA</p></div>
   </div>
 </div>
-
-<script>
-$('.folksong-link').on('click', function (e) {
-  e.preventDefault();
-  var folksong = e.target.getAttribute('data-id')
-  $("#folksong-content").load(folksong + '?layout=false');
-});
-</script>
