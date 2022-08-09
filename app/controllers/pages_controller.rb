@@ -5,8 +5,7 @@ class PagesController < ApplicationController
   private
 
   def layout_for_page
-    @page = params[:id]
-    if @page.include?('/') && !@page.include?('index')
+    if params.key?(:layout) && params[:layout] == 'false'
       'empty'
     else
       'application'
