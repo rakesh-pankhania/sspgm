@@ -1,31 +1,33 @@
-<h1 class="page-header">Answers of Why</h1>
+<%= render 'shared/new_styles' %>
+
+<%= link_to "Answers of Why", page_path('answers'), class: 'list-group-item list-group-item-action list-group-item-primary mb-4' %>
 
 <div class="row">
   <div class="col-4 col-vertical-scroll">
-    <nav class="nav flex-column">
-      <%= link_to 'Why do we light a lamp?', page_path('answers/why_do_we_light_a_lamp'), class:'nav-link' %>
-      <%= link_to 'Why do we have a prayer room?', page_path('answers/why_do_we_have_a_prayer_room'), class: 'nav-link' %>
-      <%= link_to 'Why do we do namaste?', page_path('answers/why_do_we_do_namaste'), class: 'nav-link' %>
-      <%= link_to 'Why do we prostrate before parents and elders?', page_path('answers/why_do_we_prostrate_before_elders'), class: 'nav-link' %>
-      <%= link_to 'Why do we wear marks (tilak, pottu and the like) on the forehead?', page_path('answers/why_do_we_wear_marks_on_the_forehead'), class: 'nav-link' %>
-      <%= link_to 'Why do we not touch papers, books and people with the feet?', page_path('answers/why_do_we_not_touch_objects_with_the_feet'), class: 'nav-link' %>
-      <%= link_to 'To touch another with the feet is considered an act of misdemeanor. Why is this so?', page_path('answers/why_do_we_not_touch_people_with_our_feet'), class: 'nav-link' %>
-      <%= link_to 'Why do we apply the holy ash?', page_path('answers/why_do_we_apply_the_holy_ash'), class: 'nav-link' %>
-      <%= link_to 'Why do we offer food to the Lord before eating it?', page_path('answers/why_do_we_offer_food_to_the_lord_before_eating_it'), class: 'nav-link' %>
-      <%= link_to 'Why do we fast?', page_path('answers/why_do_we_fast'), class: 'nav-link' %>
-      <%= link_to 'Why do we do pradakshina (circumambulate)?', page_path('answers/why_do_we_do_pradakshina'), class: 'nav-link' %>
-      <%= link_to 'Why is pradakshina done only in a clockwise manner? ', page_path('answers/why_is_pradakshina_done_only_in_a_clockwise_manner_'), class: 'nav-link' %>
-      <%= link_to 'Why do we regard trees and plants as sacred?', page_path('answers/why_do_we_regard_trees_and_plants_as_sacred'), class: 'nav-link' %>
-      <%= link_to 'Why do we ring the bell in a temple?', page_path('answers/why_do_we_ring_the_bell_in_a_temple'), class: 'nav-link' %>
-      <%= link_to 'Why do we worship the kalasha?', page_path('answers/why_do_we_worship_the_kalasha'), class: 'nav-link' %>
-      <%= link_to 'Why do we consider the lotus as special?', page_path('answers/why_do_we_consider_the_lotus_as_special'), class: 'nav-link' %>
-      <%= link_to 'Why do we worship tulasi?', page_path('answers/why_do_we_worship_tulasi'), class: 'nav-link' %>
-      <%= link_to 'Why do we blow the conch?', page_path('answers/why_do_we_blow_the_conch'), class: 'nav-link' %>
-      <%= link_to 'Why do we say shaanti thrice?', page_path('answers/why_do_we_say_shaanti_thrice'), class: 'nav-link' %>
-      <%= link_to 'Why do we offer a coconut?', page_path('answers/why_do_we_offer_a_coconut'), class: 'nav-link' %>
-      <%= link_to 'Why do we chant Om?', page_path('answers/why_do_we_chant_om'), class: 'nav-link' %>
-      <%= link_to 'Why do we do aarati?', page_path('answers/why_do_we_do_aarati'), class: 'nav-link' %>
-    </nav>
+    <div class="list-group list-group-flush">
+      <%= link_to 'Why do we light a lamp?', page_path('answers/why-do-we-light-a-lamp'), class:'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we have a prayer room?', page_path('answers/why-do-we-have-a-prayer-room'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we do namaste?', page_path('answers/why-do-we-do-namaste'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we prostrate before parents and elders?', page_path('answers/why-do-we-prostrate-before-elders'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we wear marks (tilak, pottu and the like) on the forehead?', page_path('answers/why-do-we-wear-marks-on-the-forehead'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we not touch papers, books and people with the feet?', page_path('answers/why-do-we-not-touch-objects-with-the-feet'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'To touch another with the feet is considered an act of misdemeanor. Why is this so?', page_path('answers/why-do-we-not-touch-people-with-our-feet'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we apply the holy ash?', page_path('answers/why-do-we-apply-the-holy-ash'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we offer food to the Lord before eating it?', page_path('answers/why-do-we-offer-food-to-the-lord-before-eating-it'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we fast?', page_path('answers/why-do-we-fast'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we do pradakshina (circumambulate)?', page_path('answers/why-do-we-do-pradakshina'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why is pradakshina done only in a clockwise manner? ', page_path('answers/why-is-pradakshina-done-only-in-a-clockwise-manner'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we regard trees and plants as sacred?', page_path('answers/why-do-we-regard-trees-and-plants-as-sacred'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we ring the bell in a temple?', page_path('answers/why-do-we-ring-the-bell-in-a-temple'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we worship the kalasha?', page_path('answers/why-do-we-worship-the-kalasha'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we consider the lotus as special?', page_path('answers/why-do-we-consider-the-lotus-as-special'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we worship tulasi?', page_path('answers/why-do-we-worship-tulasi'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we blow the conch?', page_path('answers/why-do-we-blow-the-conch'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we say shaanti thrice?', page_path('answers/why-do-we-say-shaanti-thrice'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we offer a coconut?', page_path('answers/why-do-we-offer-a-coconut'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we chant Om?', page_path('answers/why-do-we-chant-om'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'Why do we do aarati?', page_path('answers/why-do-we-do-aarati'), class: 'list-group-item list-group-item-action' %>
+    </div>
   </div>
 
   <div class="col-8">

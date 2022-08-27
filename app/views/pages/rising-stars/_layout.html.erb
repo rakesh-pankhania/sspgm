@@ -1,0 +1,18 @@
+<%= render 'shared/new_styles' %>
+
+<%= link_to "Rising Stars", page_path('rising-stars'), class: 'list-group-item list-group-item-action list-group-item-primary mb-4' %>
+
+<div class="row">
+  <div class="col-4 col-vertical-scroll">
+    <div class="list-group list-group-flush">
+      <%= link_to "Arvind Madhavji Devalia", page_path('rising-stars/arvind-madhavji-devalia'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Riten Hirjibhai Gohil", page_path('rising-stars/riten-hirjibhai-gohil'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Manoj Mohanbhai Bhimji Ladwa", page_path('rising-stars/manoj-mohanbhai-ladwa'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Udit Dayabhai Pankhania", page_path('rising-stars/udit-dayabhai-pankhania'), class: 'list-group-item list-group-item-action' %>
+    </div>
+  </div>
+
+  <div class="col-8">
+    <%= yield %>
+  </div>
+</div>

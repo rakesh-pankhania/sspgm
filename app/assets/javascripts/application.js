@@ -18,9 +18,10 @@
 //= require bootstrap-sprockets
 
 $(document).on('turbolinks:load', function() {
-    $('.toc-link').on('click', function (e) {
-      e.preventDefault();
-      var contentPath = e.target.getAttribute('data-id')
-      $("#toc-content").load(contentPath + '?layout=false');
-    });
+    // Nothing using this yet
+    // $('.toc-link').on('click', function (e) {
+    //   e.preventDefault();
+    //   var contentPath = e.target.getAttribute('data-id')
+    //   $("#toc-content").load(contentPath + '?layout=false');
+    // });
 });

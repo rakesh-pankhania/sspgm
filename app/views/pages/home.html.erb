@@ -4,15 +4,14 @@
   <div class="col-4" style="border-right:2px solid #CC3333;">
       <font color="#CC3333" size="3"><b>Features</b></font><br />
       <!-- Surnames -->
-      <%= link_to "History of Surnames", page_path('surnames/index') %><br />
-      <%= link_to "Kurdevi", page_path('sspgmkurdevi') %><br />
+      <%= link_to "History of Surnames", page_path('surnames') %><br />
       <%= link_to "Family Trees", page_path('familytrees/home') %><br />
 
       <!-- Profiles -->
-      <%= link_to "Sants & Bhaktas", page_path('sspgmsantsbhaktas') %><br />
-      <%= link_to "Profiles of Our Elders", page_path('sspgmprofiles') %><br />
-      <%= link_to "Rising Stars", page_path('risingstars') %><br />
-      <%= link_to "Folksongs", page_path('folksongs/index') %><br /><br />
+      <%= link_to "Sants & Bhaktas", page_path('sants-bhaktas') %><br />
+      <%= link_to "Profiles of Our Elders", page_path('elders') %><br />
+      <%= link_to "Rising Stars", page_path('rising-stars') %><br />
+      <%= link_to "Folksongs", page_path('folksongs') %><br /><br />
 
       <font color="#CC3333" size="3"><b>Articles</b></font><br />
       <%= link_to "The History of SSPGM", page_path('sspgmhistory3') %><br />
@@ -22,6 +21,7 @@
       <%= link_to "Shreebai Mataji's Story", page_path('sspgmshreebai2') %><br />
 
       <!-- Customs & Rituals -->
+      <%= link_to "Kurdevi", page_path('sspgmkurdevi') %><br />
       <%= link_to "Raksha Bandhan", page_path('rakshabandhan') %><br />
       <%= link_to "Diwali", page_path('diwali') %><br />
 
@@ -33,7 +33,7 @@
       <%= link_to "Stories of Krishna", page_path('krishna') %><br /><br />
 
       <font color="#CC3333" size="3"><b>Resources</b></font><br />
-      <%= link_to "Answers of Why", page_path('answers/index') %><br />
+      <%= link_to "Answers of Why", page_path('answers') %><br />
       <%= link_to "Educational Trust Funds", page_path('trustfunds') %><br />
       <%= link_to "Glossary of Terms", page_path('sspgmglossary') %><br />
       <%= link_to "Publications", page_path('publications') %><br />
@@ -46,12 +46,6 @@
       <center>
         <%= link_to page_path('sspgmwelcome') do %>
           <font color="#66CCFF">Welcome to SSPGM.net! Read our welcome note</font>
-        <% end -%>
-
-        <br /><br />
-
-        <%= link_to page_path('sspgmkurdevi') do %>
-          <font color="#CC3333">See our updated Kurdevi page, with an image submitted by Devki Hitesh Ladwa, UK</font>
         <% end -%>
 
         <br /><br />

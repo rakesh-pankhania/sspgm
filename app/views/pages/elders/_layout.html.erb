@@ -1,0 +1,33 @@
+<%= render 'shared/new_styles' %>
+
+<%= link_to "Profiles of Our Elders", page_path('elders'), class: 'list-group-item list-group-item-action list-group-item-primary mb-4' %>
+
+<div class="row">
+  <div class="col-4 col-vertical-scroll">
+    <div class="list-group list-group-flush">
+      <%= link_to "Chavda, Sumitraben Parsotambhai", page_path('elders/sumitraben-parsotambhai-chavda'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Devalia, Madhavjibhai Narsi", page_path('elders/madhavjibhai-narsi-devalia'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Dhokia, Premjibhai Bhura", page_path('elders/premjibhai-bhura-dhokia'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Fatania, Jatin Vinod", page_path('elders/jatin-vinod-fatania'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Fatania, Mohanlal Virjibhai", page_path('elders/mohanlal-virjibhai-fatania'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Fatania, Vinodbhai Khimjibhai", page_path('elders/vinodbhai-khimjibhai-fatania'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Jadav, Rajesh Bhimji", page_path('elders/rajesh-bhimji-jadav'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Jagatiya, Hirajibhai Punjabhai", page_path('elders/hirajibhai-punjabhai-jagatiya'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Koria, Laljibhai Ranmalbhai", page_path('elders/laljibhai-ranmalbhai-koria'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Koria, Nathabhai Jadavbhai", page_path('elders/nathabhai-jadavbhai-koria'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Kukadia, Anila Girishkumar", page_path('elders/anila-girishkumar-kukadia'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Ladva, Prabjibhai Jinabhai", page_path('elders/prabjibhai-jinabhai-ladva'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Pankhania, Karsanbhai Becharbhai", page_path('elders/karsanbhai-becharbhai-pankhania'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Pankhania, Masribhai Jerambhai", page_path('elders/masribhai-jerambhai-pankhania'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Pankhania, Tulsidas Becharbhai", page_path('elders/tulsidas-becharbhai-pankhania'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Pankhania, Vallabh Devshi", page_path('elders/vallabh-devshi-pankhania'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Pankhania, Vinodbhai Masribhai", page_path('elders/vinodbhai-masribhai-pankhania'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Parmar, Dhansukh Shivabhai", page_path('elders/dhansukh-shivabhai-parmar'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Shingadia, Virji Jeram", page_path('elders/virji-jeram-shingadia'), class: 'list-group-item list-group-item-action' %>
+    </div>
+  </div>
+
+  <div class="col-8">
+    <%= yield %>
+  </div>
+</div>
