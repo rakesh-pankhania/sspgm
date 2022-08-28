@@ -1,0 +1,22 @@
+<%= render 'shared/new_styles' %>
+
+<%= link_to "Atlanta Mandal", page_path('mandals/atlanta'), class: 'list-group-item list-group-item-action list-group-item-primary mb-4' %>
+
+<div class="row">
+  <div class="col-4 col-vertical-scroll">
+    <div class="list-group list-group-flush">
+      <%= link_to "History", page_path('mandals/atlanta/history'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Constitution", page_path('mandals/atlanta/constitution'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Committee 2000 - 2003", page_path('mandals/atlanta/committee-2000'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Committee 2003 - 2005", page_path('mandals/atlanta/committee-2003'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Photo Gallery", page_path('mandals/atlanta/photos'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "2001 India Earthquake Relief Fund", page_path('mandals/atlanta/events/2001-02-10-earthquake-relief-fund'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "2002 Easter/Holi Picnic", page_path('mandals/atlanta/events/2002-03-31-easter-holi-picnic'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "2004 Sundarkand Path", page_path('mandals/atlanta/events/2004-02-07-sundarkand-path'), class: 'list-group-item list-group-item-action' %>
+    </div>
+  </div>
+
+  <div class="col-8">
+    <%= yield %>
+  </div>
+</div>

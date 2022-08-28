@@ -1,0 +1,17 @@
+<%= render 'shared/new_styles' %>
+
+<%= link_to "Bolton Mandal", page_path('mandals/bolton'), class: 'list-group-item list-group-item-action list-group-item-primary mb-4' %>
+
+<div class="row">
+  <div class="col-4 col-vertical-scroll">
+    <div class="list-group list-group-flush">
+      <%= link_to "History", page_path('mandals/bolton/history'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Committee", page_path('mandals/bolton/committee'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Navratri Festival", image_path('boltonnav05.jpg'), class: 'list-group-item list-group-item-action' %>
+    </div>
+  </div>
+
+  <div class="col-8">
+    <%= yield %>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<%= render 'shared/new_styles' %>
+
+<%= link_to "Valabh Vidyanagar Mandal", page_path('mandals/valabh-vidyanagar'), class: 'list-group-item list-group-item-action list-group-item-primary mb-4' %>
+
+<div class="row">
+  <div class="col-4 col-vertical-scroll">
+    <div class="list-group list-group-flush">
+      <%= link_to "Trust Fund", page_path('mandals/valabh-vidyanagar/trust-fund'), class: 'list-group-item list-group-item-action' %>
+      <%= link_to "Trust Fund Update", page_path('mandals/valabh-vidyanagar/trust-fund-update'), class: 'list-group-item list-group-item-action' %>
+    </div>
+  </div>
+
+  <div class="col-8">
+    <%= yield %>
+  </div>
+</div>
