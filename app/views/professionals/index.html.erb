@@ -1,36 +1,52 @@
-<div class="row" style="border-bottom: 2px solid #33CCCC">
-  <center><h1 class="page-header">SSPGM Professionals</h1></center>
-</div>
+<%= render 'shared/new_styles' %>
+
+<%= link_to "Professionals", professionals_path, class: 'list-group-item list-group-item-action list-group-item-primary mb-4' %>
 
 <div class="row">
-  <div class="col-4 p-3 filter-list" style="border-right:2px solid #33CCCC">
-    <% style = @filter_by.nil? ? "active-filter" : "" %>
-    <%= link_to "All Categories", professionals_url, class: style %><br />
-    <% @filter_categories.each do |category| -%>
-      <% style = category == @filter_by ? "active-filter" : "" %>
-      <%= link_to category, professionals_url(category: category), class: style %><br />
-    <% end -%>
+  <div class="col-4 col-vertical-scroll">
+    <div class="list-group list-group-flush">
+      <% style = @filter_by.nil? ? "list-group-item list-group-item-action active" : "list-group-item list-group-item-action" %>
+      <%= link_to "All Categories", professionals_url, class: style %>
+      <% @filter_categories.each do |category| -%>
+        <% style = category == @filter_by ? "list-group-item list-group-item-action active" : "list-group-item list-group-item-action" %>
+        <%= link_to category, professionals_url(category: category), class: style %>
+      <% end -%>
+    </div>
   </div>
 
-  <div class="col-8 p-3">
+  <div class="col-8">
     <% @professionals_by_category.each do |category, professionals| %>
       <% professionals.each do |professional| %>
-        <div class="mb-4">
-          <h3><%= professional.full_name %></h3>
-          <% unless professional.graduation_degree.blank? %><%= professional.graduation_degree %><% unless professional.graduation_year.blank? %> (<%= professional.graduation_year %>)<br /><% end %><% end %>
-          <% unless professional.graduation_university.blank? %><%= professional.graduation_university %><br /><% end %>
-          <% unless professional.job_title.blank? %><b>Title: </b><%= professional.job_title %><br /><% end %>
-          <% unless professional.job_company.blank? %><b>Company: </b><%= professional.job_company %><br /><% end %>
-          <% unless professional.location.blank? %><b>Location: </b><%= professional.location %><br /><% end %>
+      <% anchor = "professional-#{professional.id}" %>
+      <a name=<%= anchor %>></a>
+      <div class="card mb-2">
+        <div class="card-body">
+
+          <h4 class="card-title"><%= professional.full_name %></h4>
+          <% unless professional.job_title.blank? and professional.job_company.blank? %><p class="card-text text-muted"><%= [professional.job_title, professional.job_company].reject(&:blank?).join(' | ') %></p><% end %>
+          <p class="mb-2"></p>
+
+          <% unless professional.graduation_degree.blank? %>
+            <b>Education: </b><%= professional.graduation_degree %>
+            <% unless professional.graduation_year.blank? %> (<%= professional.graduation_year %>)<% end %>
+            <% unless professional.graduation_university.blank? %> <%= professional.graduation_university %><% end %>
+            <br />
+          <% end %>
+
           <% unless professional.telephone.blank? %><b>Telephone: </b><%= professional.telephone %><br /><% end %>
           <% unless professional.mobile.blank? %><b>Mobile: </b><%= professional.mobile %><br /><% end %>
           <% unless professional.fax.blank? %><b>Fax: </b><%= professional.fax %><br /><% end %>
           <% unless professional.email.blank? %><b>Email: </b><%= link_to professional.email, "mailto:#{professional.email}" %><br /><% end %>
           <% unless professional.website.blank? %><b>Website: </b><%= link_to professional.website, url_with_http(professional.website) %><br /><% end %>
-          <% unless professional.spec.blank? %><b>Specification: </b><%= professional.spec %><br /><% end %>
+          <% unless professional.youtube.blank? %><b>Youtube: </b><%= link_to professional.youtube, youtube_url(professional.youtube) %><br /><% end %>
+          <% unless professional.twitter.blank? %><b>Twitter: </b><%= link_to professional.twitter, twitter_url(professional.twitter) %><br /><% end %>
         </div>
+
+        <% unless professional.location.blank? %><div class="card-footer text-muted"><%= professional.location %></div><% end %>
+
+      </div>
       <% end -%>
-      <br />
-    <% end %>
+    <% end -%>
+    </div>
   </div>
 </div>
