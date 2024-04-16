@@ -40,7 +40,7 @@
           <% unless professional.website.blank? %><b>Website: </b><%= link_to professional.website, url_with_http(professional.website) %><br /><% end %>
           <% unless professional.youtube.blank? %><b>Youtube: </b><%= link_to professional.youtube, youtube_url(professional.youtube) %><br /><% end %>
           <% unless professional.twitter.blank? %><b>Twitter: </b><%= link_to professional.twitter, twitter_url(professional.twitter) %><br /><% end %>
-          <% unless professional.photos_link.blank? %><b>Photos: </b><%= link_to "Link", url_with_http(professional.photos_link) %><br /><% end %>
+          <% unless professional.photos_link.blank? %><b>Photos: </b><%= link_to "Link", professional.photos_link %><br /><% end %>
         </div>
 
         <% unless professional.location.blank? %><div class="card-footer text-muted"><%= professional.location %></div><% end %>
