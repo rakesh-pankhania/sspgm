@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20240409223922) do
+ActiveRecord::Schema.define(version: 20240416000604) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -107,6 +107,7 @@ ActiveRecord::Schema.define(version: 20240409223922) do
     t.bigint "person_id"
     t.string "twitter"
     t.string "youtube"
+    t.string "photos_link"
     t.index ["person_id"], name: "index_professionals_on_person_id"
   end
 
