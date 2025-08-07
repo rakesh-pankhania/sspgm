@@ -1,0 +1,39 @@
+# Use bin/rails credentials:edit to uncomment and add your own credentials.
+# Alternatively, see the Active Storage overview guide for information
+# about configuring Amazon S3, Microsoft Azure, or Google Cloud Storage.
+
+local:
+  service: Disk
+  root: <%= Rails.root.join("storage") %>
+
+# Use Amazon S3 for cloud storage (requires "aws-sdk-s3" gem)
+# amazon:
+#   service: S3
+#   access_key_id: <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
+#   secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
+#   region: your-region
+#   bucket: your-bucket-name
+
+# Use Microsoft Azure for cloud storage (requires "azure-storage-blob" gem)
+# azure:
+#   service: AzureStorage
+#   storage_account_name: your-storage-account-name
+#   storage_access_key: <%= Rails.application.credentials.dig(:azure_storage, :storage_access_key) %>
+#   container: your-container-name
+
+# Use Google Cloud Storage for cloud storage (requires "google-cloud-storage" gem)
+# google:
+#   service: GCS
+#   project: your-project-id
+#   credentials: <%= Rails.root.join("path/to/keyfile.json") %>
+#   bucket: your-bucket-name
+
+# Use Cloudinary for cloud storage (requires "cloudinary" gem)
+# cloudinary:
+#   service: Cloudinary
+#   cloud_name: your-cloud-name
+#   api_key: <%= Rails.application.credentials.dig(:cloudinary, :api_key) %>
+#   api_secret: <%= Rails.application.credentials.dig(:cloudinary, :api_secret) %>
+
+# Remember not to commit secrets to version control. Instead, use credentials:
+# https://guides.rubyonrails.org/security.html#custom-credentials 
