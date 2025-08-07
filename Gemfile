@@ -6,15 +6,15 @@ git_source(:github) do |repo_name|
 end
 
 # Ruby. https://github.com/ruby/ruby
-ruby '~> 2.6.6'
+ruby '~> 3.3.9'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 7.1.0'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.18'
+gem 'pg', '~> 1.5'
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 6.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -53,8 +53,8 @@ group :development do
   # https://github.com/ryanb/letter_opener
   gem 'letter_opener'
   # Listens to file modifications and notifies you about the changes
-  # https://github.com/guard/listen
-  gem 'listen', '>= 3.0.5', '< 3.2'
+# https://github.com/guard/listen
+gem 'listen', '~> 3.5'
   # Access an IRB console on exception pages or by using <%= console %>
   # https://github.com/rails/web-console
   gem 'web-console', '>= 3.3.0'
